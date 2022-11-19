@@ -1,10 +1,12 @@
 import { Box, Button, Heading, Text, VStack, HStack } from "@chakra-ui/react";
+import { url } from "inspector";
 import Logo from "../logo/Logo";
 
 const HomePage = () => {
   return (
     <Box
-      bgImage={"/homepage/hero-bg-desktop@2x.jpg"}
+      //   bgImage={`linear-gradient(90deg, black, rgba(0, 0, 0, 0.3)), url(/homepage/hero-bg-desktop@2x.jpg)`}
+      bgImage={`linear-gradient(to right, black, black 34%, rgba(0, 0, 0, 0.3) 34%), url(/homepage/hero-bg-desktop@2x.jpg)`}
       bgRepeat="no-repeat"
       paddingBottom="6rem"
       bgSize="contain"
