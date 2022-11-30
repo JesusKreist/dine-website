@@ -33,8 +33,8 @@ const LocalFood = () => {
         </Box>
         <Box
           width="160px"
-          position="absolute"
-          bottom="780px"
+          position="relative"
+          bottom="760px"
           marginLeft="27rem"
         >
           <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
