@@ -8,6 +8,7 @@ const LocalFood = () => {
       <RestaurantShowcaseText
         heading="The most locally sourced food"
         text="All our ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food."
+        withDivider
       />
 
       <Box height="720px">

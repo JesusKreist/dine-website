@@ -1,13 +1,13 @@
 import { Box, Heading, Text, Image, HStack } from "@chakra-ui/react";
 
-interface RestaurantShowcaseTextProps {
+interface EventShowcaseTextProps {
   heading: string;
   text: string;
   withLeftPadding?: boolean;
   withDivider?: boolean;
 }
 
-const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
+const EventShowcaseText: React.FC<EventShowcaseTextProps> = ({
   heading,
   text,
   withLeftPadding = false,
@@ -19,7 +19,7 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
       placeContent="center"
       flexDirection="column"
       maxWidth="445px"
-      rowGap="2rem"
+      rowGap="1rem"
       paddingLeft={withLeftPadding ? "2rem" : "0"}
     >
       {withDivider && (
@@ -46,4 +46,4 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
   );
 };
 
-export default RestaurantShowcaseText;
+export default EventShowcaseText;

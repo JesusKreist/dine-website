@@ -26,6 +26,7 @@ const MenuHighlights = () => {
           heading="A few highlights from our menu"
           text="We cater for all dietary requirements, but here's a glimpse at some 
         of our diner's favourites. Our menu is revamped every season."
+          withDivider
         />
         <Box>
           <VStack spacing="2rem">

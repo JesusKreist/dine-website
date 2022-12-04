@@ -28,6 +28,7 @@ const EnjoyablePlace = () => {
         text="Our relaxed surroundings make dining with us a great experience for
         everyone. We can even arrange a tour of the farm before your meal."
         withLeftPadding
+        withDivider
       />
     </Fragment>
   );

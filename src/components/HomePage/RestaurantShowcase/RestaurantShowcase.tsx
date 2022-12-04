@@ -1,7 +1,8 @@
 import { Box, Grid, Image, Heading, Text } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import EnjoyablePlace from "./EnjoyablePlace";
-import Events from "./Events";
+import Events from "./Events/Events";
+
 import LocalFood from "./LocalFood";
 import MenuHighlights from "./MenuHighlights";
 
