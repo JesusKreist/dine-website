@@ -18,16 +18,7 @@ const ReservationBanner = () => {
         >
           Ready to make a reservation?
         </Heading>
-        <Button
-          borderRadius="none"
-          variant="brandPrimaryOnLight"
-          padding="2rem 3rem"
-          fontSize="xl"
-          fontWeight="bold"
-          letterSpacing="0.2ch"
-        >
-          BOOK A TABLE
-        </Button>
+        <Button variant="brandPrimaryOnDark">BOOK A TABLE</Button>
       </Flex>
     </Box>
   );

@@ -1,10 +1,15 @@
 import { extendTheme } from "@chakra-ui/react";
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
-const brandPrimary = defineStyle({
+const brandPrimaryOnLight = defineStyle({
   background: "black",
   color: "white",
   border: "2px solid black",
+  borderRadius: "none",
+  padding: "2rem 3rem",
+  fontSize: "xl",
+  fontWeight: "bold",
+  letterSpacing: "0.25ch",
   _hover: {
     background: "white",
     color: "black",
@@ -12,9 +17,14 @@ const brandPrimary = defineStyle({
   },
 });
 
-const brandPrimaryOnLight = defineStyle({
+const brandPrimaryOnDark = defineStyle({
   color: "white",
   border: "2px solid white",
+  borderRadius: "none",
+  padding: "2rem 3rem",
+  fontSize: "xl",
+  fontWeight: "bold",
+  letterSpacing: "0.25ch",
   _hover: {
     background: "white",
     color: "black",
@@ -23,7 +33,7 @@ const brandPrimaryOnLight = defineStyle({
 });
 
 export const buttonTheme = defineStyleConfig({
-  variants: { brandPrimary, brandPrimaryOnLight },
+  variants: { brandPrimaryOnLight, brandPrimaryOnDark },
 });
 
 const theme = extendTheme({

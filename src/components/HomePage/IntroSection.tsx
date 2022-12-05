@@ -32,16 +32,7 @@ const IntroSection = () => {
           Experience our seasonal menu in beautiful country surroundings. Eat
           the freshest produce from the comfort of our farmhouse.
         </Text>
-        <Button
-          borderRadius="none"
-          variant="outline"
-          padding="2rem 3rem"
-          fontSize="xl"
-          fontWeight="bold"
-          letterSpacing="0.2ch"
-        >
-          BOOK A TABLE
-        </Button>
+        <Button variant="brandPrimaryOnDark">BOOK A TABLE</Button>
       </Box>
     </Box>
   );

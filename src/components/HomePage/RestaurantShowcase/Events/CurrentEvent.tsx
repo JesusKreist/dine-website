@@ -21,17 +21,7 @@ const CurrentEvent: React.FC<CurrentEventProps> = ({
         <EventShowcaseText heading={title} text={description} />
       </Box>
       <Box paddingBottom="1.5rem">
-        <Button
-          borderRadius="none"
-          variant="brandPrimary"
-          colorScheme="blackAlpha"
-          padding="2rem 3rem"
-          fontSize="xl"
-          fontWeight="bold"
-          letterSpacing="0.2ch"
-        >
-          BOOK A TABLE
-        </Button>
+        <Button variant="brandPrimaryOnLight">BOOK A TABLE</Button>
       </Box>
       <EventSelector
         handleEventChange={handleEventChange}
