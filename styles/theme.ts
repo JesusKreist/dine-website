@@ -12,8 +12,18 @@ const brandPrimary = defineStyle({
   },
 });
 
+const brandPrimaryOnLight = defineStyle({
+  color: "white",
+  border: "2px solid white",
+  _hover: {
+    background: "white",
+    color: "black",
+    border: "2px solid white",
+  },
+});
+
 export const buttonTheme = defineStyleConfig({
-  variants: { brandPrimary },
+  variants: { brandPrimary, brandPrimaryOnLight },
 });
 
 const theme = extendTheme({

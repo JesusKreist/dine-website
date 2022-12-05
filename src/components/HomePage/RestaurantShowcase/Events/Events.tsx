@@ -33,7 +33,8 @@ const Events = () => {
       <Flex
         columnGap="7rem"
         justifyContent="center"
-        margin="-220px"
+        marginTop="-220px"
+        paddingBottom="10rem"
         alignItems="center"
       >
         <Image
