@@ -26,13 +26,13 @@ const Events = () => {
         height="2px"
         bgColor="#9e7f66"
         position="relative"
-        marginLeft="44rem"
+        marginLeft="43rem"
         top={event.lineCssTopPosition}
       ></Box>
 
       <Flex
         columnGap="7rem"
-        justifyContent="center"
+        paddingLeft="10rem"
         marginTop="-220px"
         paddingBottom="10rem"
         alignItems="center"

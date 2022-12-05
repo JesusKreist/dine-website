@@ -7,9 +7,10 @@ const ReservationBanner = () => {
       height="240px"
       bgImage="/homepage/ready-bg-desktop@2x.jpg"
       bgSize="contain"
+      paddingLeft="10rem"
     >
       <Flex
-        placeContent="center"
+        // placeContent="center"
         alignItems="center"
         height="100%"
         columnGap="16rem"
