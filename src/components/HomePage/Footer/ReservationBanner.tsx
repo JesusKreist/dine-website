@@ -9,12 +9,7 @@ const ReservationBanner = () => {
       bgSize="contain"
       paddingLeft="10rem"
     >
-      <Flex
-        // placeContent="center"
-        alignItems="center"
-        height="100%"
-        columnGap="16rem"
-      >
+      <Flex alignItems="center" height="100%" columnGap="16rem">
         <Heading
           fontWeight="bold"
           fontSize="48px"
