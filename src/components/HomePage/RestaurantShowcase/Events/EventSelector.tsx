@@ -28,6 +28,7 @@ const EventSelector: React.FC<EventSelectorProps> = ({
           lineHeight="28px"
           fontWeight="semibold"
           color="#242b37"
+          letterSpacing=".25ch"
           opacity={currentEventId === 1 ? 1 : 0.5}
         >
           FAMILY GATHERING
@@ -46,6 +47,7 @@ const EventSelector: React.FC<EventSelectorProps> = ({
           lineHeight="28px"
           fontWeight="semibold"
           color="#242b37"
+          letterSpacing=".25ch"
           opacity={currentEventId === 2 ? 1 : 0.5}
         >
           SPECIAL EVENTS
@@ -64,6 +66,7 @@ const EventSelector: React.FC<EventSelectorProps> = ({
           lineHeight="28px"
           fontWeight="semibold"
           color="#242b37"
+          letterSpacing=".25ch"
           opacity={currentEventId === 3 ? 1 : 0.5}
         >
           SOCIAL EVENTS
