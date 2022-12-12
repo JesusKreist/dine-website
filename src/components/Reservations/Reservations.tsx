@@ -16,6 +16,7 @@ import React from "react";
 import Logo from "../logo/Logo";
 import DatePicker from "./DatePicker";
 import EmailInput from "./EmailInput";
+import GuestsNumberPicker from "./GuestsNumberPicker";
 import NameInput from "./NameInput";
 import ReservationsHeroText from "./ReservationsHeroText";
 import TimePicker from "./TimePicker";
@@ -43,17 +44,17 @@ const Reservations = () => {
             justifyContent="center"
           >
             <Grid
-              gridTemplateRows="repeat(5, 1fr)"
+              gridTemplateRows="repeat(6, 1fr)"
               as="form"
               width="80%"
               height="80%"
+              fontSize="lg"
             >
               <NameInput />
               <EmailInput />
-
               <DatePicker />
-
               <TimePicker />
+              <GuestsNumberPicker />
             </Grid>
           </Flex>
         </Flex>
