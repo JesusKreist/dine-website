@@ -1,15 +1,14 @@
-import { Heading, Text } from "@chakra-ui/react";
-import { Fragment } from "react";
+import { Heading, Text, Box } from "@chakra-ui/react";
 
 const ReservationsHeroText = () => {
   return (
-    <Fragment>
+    <Box width="445px" color="white">
       <Heading
         as="h2"
         fontSize={"80px"}
         fontWeight="light"
         lineHeight={"80px"}
-        marginTop="9rem"
+        // marginTop="9rem"
         paddingBottom="0.5rem"
       >
         Reservations
@@ -19,7 +18,7 @@ const ReservationsHeroText = () => {
         please feel free to call on the phone number below. We&apos;ll be happy
         to accommodate you.
       </Text>
-    </Fragment>
+    </Box>
   );
 };
 

@@ -18,11 +18,10 @@ const Reservations = () => {
         bgImage="booking/hero-bg-desktop@2x.jpg"
         bgSize="contain"
       >
-        <Flex gap="7rem">
-          <Box width="445px" color="white">
-            <Logo />
-            <ReservationsHeroText />
-          </Box>
+        <Logo />
+
+        <Flex direction="row" gap="7rem" marginTop="9rem">
+          <ReservationsHeroText />
           <ReservationsForm />
         </Flex>
       </GridItem>

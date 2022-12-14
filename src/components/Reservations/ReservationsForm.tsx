@@ -15,6 +15,7 @@ const ReservationsForm = () => {
       alignItems="center"
       justifyContent="center"
       position="relative"
+      boxShadow="xl"
     >
       <Grid
         gridTemplateRows="repeat(6, 1fr)"
@@ -31,7 +32,7 @@ const ReservationsForm = () => {
         <GuestsNumberPicker />
         <Button variant="brandPrimaryOnLight">MAKE RESERVATION</Button>
       </Grid>
-      <Box position="absolute" top="500px" left="-80px">
+      <Box position="absolute" top="500px" left="-80px" zIndex="-1">
         <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
       </Box>
     </Flex>
