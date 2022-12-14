@@ -1,63 +1,40 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Text,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Button, Image } from "@chakra-ui/react";
 import React from "react";
 import Logo from "../logo/Logo";
 import DatePicker from "./DatePicker";
 import EmailInput from "./EmailInput";
 import GuestsNumberPicker from "./GuestsNumberPicker";
 import NameInput from "./NameInput";
+import ReservationsForm from "./ReservationsForm";
 import ReservationsHeroText from "./ReservationsHeroText";
 import TimePicker from "./TimePicker";
 
 const Reservations = () => {
   return (
-    <Grid border="2px solid blue">
+    <Grid>
       <GridItem
         paddingLeft="10rem"
         height="600px"
         bgImage="booking/hero-bg-desktop@2x.jpg"
         bgSize="contain"
       >
-        <Flex>
+        <Flex gap="7rem">
           <Box width="445px" color="white">
             <Logo />
             <ReservationsHeroText />
           </Box>
-          <Flex
-            className="reservations-form"
-            width="540px"
-            height="545px"
-            bgColor="white"
-            alignItems="center"
-            justifyContent="center"
-          >
-            <Grid
-              gridTemplateRows="repeat(6, 1fr)"
-              as="form"
-              width="80%"
-              height="80%"
-              fontSize="lg"
-            >
-              <NameInput />
-              <EmailInput />
-              <DatePicker />
-              <TimePicker />
-              <GuestsNumberPicker />
-            </Grid>
-          </Flex>
+          <ReservationsForm />
         </Flex>
+      </GridItem>
+      <GridItem>
+        <Image
+          width="993px"
+          height="320px"
+          src="patterns/pattern-curve-bottom-right.svg"
+          alt="curve pattern"
+          objectFit="cover"
+          objectPosition="top right"
+        />
       </GridItem>
     </Grid>
   );
