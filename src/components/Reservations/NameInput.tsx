@@ -11,6 +11,7 @@ const NameInput = () => {
         variant="flushed"
         borderBottomWidth="2px"
         size="lg"
+        paddingLeft="1rem"
       />
     </FormControl>
   );

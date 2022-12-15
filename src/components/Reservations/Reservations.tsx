@@ -1,5 +1,6 @@
 import { Box, Flex, Grid, GridItem, Button, Image } from "@chakra-ui/react";
 import React from "react";
+import Footer from "../HomePage/Footer/Footer";
 import Logo from "../logo/Logo";
 import DatePicker from "./DatePicker";
 import EmailInput from "./EmailInput";
@@ -35,6 +36,7 @@ const Reservations = () => {
           objectPosition="top right"
         />
       </GridItem>
+      <Footer />
     </Grid>
   );
 };
