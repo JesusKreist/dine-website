@@ -1,8 +1,11 @@
-import { FormControl, Input } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, Input } from "@chakra-ui/react";
+import { ReservationsInputProps } from "./types";
 
-const NameInput = () => {
+const NameInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
+  const nameIsInvalid = !!errors.name;
+  const nameErrorMessage = errors.name?.message;
   return (
-    <FormControl>
+    <FormControl isInvalid={nameIsInvalid}>
       <Input
         type="text"
         id="name"
@@ -12,7 +15,13 @@ const NameInput = () => {
         borderBottomWidth="2px"
         size="lg"
         paddingLeft="1rem"
+        {...register("name")}
       />
+      {errors.name && (
+        <FormErrorMessage paddingLeft="1rem">
+          {nameErrorMessage}
+        </FormErrorMessage>
+      )}
     </FormControl>
   );
 };
