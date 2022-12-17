@@ -1,14 +1,9 @@
-import { Box, Flex, Grid, GridItem, Button, Image } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
 import Footer from "../HomePage/Footer/Footer";
 import Logo from "../logo/Logo";
-import DatePicker from "./DatePicker";
-import EmailInput from "./EmailInput";
-import GuestsNumberPicker from "./GuestsNumberPicker";
-import NameInput from "./NameInput";
 import ReservationsForm from "./ReservationsForm";
 import ReservationsHeroText from "./ReservationsHeroText";
-import TimePicker from "./TimePicker";
 
 const Reservations = () => {
   return (

@@ -1,11 +1,41 @@
-import { Flex, Grid, Button, Box, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Grid,
+  Button,
+  Box,
+  Image,
+  FormControl,
+  FormErrorMessage,
+  Input,
+} from "@chakra-ui/react";
+import { FormEvent } from "react";
 import DatePicker from "./DatePicker";
 import EmailInput from "./EmailInput";
 import GuestsNumberPicker from "./GuestsNumberPicker";
 import NameInput from "./NameInput";
 import TimePicker from "./TimePicker";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { ErrorObject, ReservationsFormInputs } from "./types";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { validationSchema } from "./validationSchema";
 
 const ReservationsForm = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<ReservationsFormInputs>({
+    resolver: yupResolver(validationSchema),
+    mode: "onSubmit",
+  });
+
+  const onSubmit: SubmitHandler<ReservationsFormInputs> = (data) => {
+    console.log(data);
+  };
+
+  console.log(watch("name"));
+
   return (
     <Flex
       className="reservations-form"
@@ -18,19 +48,33 @@ const ReservationsForm = () => {
       boxShadow="xl"
     >
       <Grid
-        gridTemplateRows="repeat(6, 1fr)"
+        gridTemplateRows="repeat(6, 80px)"
         as="form"
         width="80%"
-        height="80%"
         fontSize="lg"
-        gap="2rem"
+        gap="rem"
+        onSubmit={handleSubmit(onSubmit)}
       >
-        <NameInput />
-        <EmailInput />
-        <DatePicker />
-        <TimePicker />
+        <NameInput
+          register={register}
+          errors={errors as Partial<ErrorObject>}
+        />
+        <EmailInput
+          register={register}
+          errors={errors as Partial<ErrorObject>}
+        />
+        <DatePicker
+          register={register}
+          errors={errors as Partial<ErrorObject>}
+        />
+        <TimePicker
+          register={register}
+          errors={errors as Partial<ErrorObject>}
+        />
         <GuestsNumberPicker />
-        <Button variant="brandPrimaryOnLight">MAKE RESERVATION</Button>
+        <Button type="submit" variant="brandPrimaryOnLight">
+          MAKE RESERVATION
+        </Button>
       </Grid>
       <Box position="absolute" top="500px" left="-80px" zIndex="-1">
         <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
