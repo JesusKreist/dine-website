@@ -1,7 +1,8 @@
 import { Flex, FormControl, Input, Text, Select } from "@chakra-ui/react";
 import React from "react";
+import { ReservationsInputProps } from "./types";
 
-const TimePicker = () => {
+const TimePicker: React.FC<ReservationsInputProps> = ({ register }) => {
   return (
     <Flex alignItems="center" justifyContent="space-between">
       <Text fontSize="lg">Pick a time</Text>
@@ -10,10 +11,11 @@ const TimePicker = () => {
           <Input
             type="text"
             placeholder="09"
-            id="time-seconds"
+            id="time-hours"
             border="none"
             size="lg"
             paddingLeft="1rem"
+            {...register("hour")}
           />
         </FormControl>
         <FormControl width="80px" borderBottomWidth="2px">
@@ -24,6 +26,7 @@ const TimePicker = () => {
             border="none"
             size="lg"
             paddingLeft="1rem"
+            {...register("minutes")}
           />
         </FormControl>
         <FormControl width="97px" borderBottomWidth="2px">
@@ -34,6 +37,7 @@ const TimePicker = () => {
             size="lg"
             defaultValue="AM"
             paddingLeft="1rem"
+            {...register("year")}
           >
             <option value="AM">AM</option>
             <option value="PM">PM</option>
