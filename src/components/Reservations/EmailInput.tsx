@@ -1,8 +1,12 @@
-import { FormControl, Input } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, Input } from "@chakra-ui/react";
+import { ReservationsInputProps } from "./types";
 
-const EmailInput = () => {
+const EmailInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
+  const emailIsInvalid = !!errors.email;
+  const emailErrorMessage = errors.email?.message;
+
   return (
-    <FormControl>
+    <FormControl isInvalid={emailIsInvalid}>
       <Input
         type="email"
         autoComplete="email"
@@ -12,7 +16,13 @@ const EmailInput = () => {
         borderBottomWidth="2px"
         size="lg"
         paddingLeft="1rem"
+        {...register("email")}
       />
+      {errors.email && (
+        <FormErrorMessage paddingLeft="1rem">
+          {emailErrorMessage}
+        </FormErrorMessage>
+      )}
     </FormControl>
   );
 };
