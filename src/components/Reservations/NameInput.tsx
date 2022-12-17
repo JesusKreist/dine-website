@@ -17,7 +17,7 @@ const NameInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
         paddingLeft="1rem"
         {...register("name")}
       />
-      {errors.name && (
+      {nameIsInvalid && (
         <FormErrorMessage paddingLeft="1rem">
           {nameErrorMessage}
         </FormErrorMessage>

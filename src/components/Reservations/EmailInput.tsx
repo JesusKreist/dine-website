@@ -18,7 +18,7 @@ const EmailInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
         paddingLeft="1rem"
         {...register("email")}
       />
-      {errors.email && (
+      {emailIsInvalid && (
         <FormErrorMessage paddingLeft="1rem">
           {emailErrorMessage}
         </FormErrorMessage>
