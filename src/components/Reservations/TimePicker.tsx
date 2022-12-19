@@ -15,21 +15,30 @@ import { ReservationsInputProps } from "./types";
 
 const TimePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const [isTimeIncomplete, setIsTimeIncomplete] = useState(false);
+  const [errorMessages, setErrorMessages] = useState([
+    "This field is incomplete",
+  ]);
 
   const hourIsInvalid = !!errors.hour;
   const minuteIsInvalid = !!errors.minute;
-  // const amOrPmIsInvalid = !!errors.amOrPm;
 
   // set isTimeIncomplete to true if any of the time inputs are invalid
   useEffect(() => {
-    const timeInputHasError = [
-      hourIsInvalid,
-      minuteIsInvalid,
-      // amOrPmIsInvalid,
-    ].includes(true);
+    const timeInputHasError = [hourIsInvalid, minuteIsInvalid].includes(true);
 
     setIsTimeIncomplete(timeInputHasError);
   }, [, errors, hourIsInvalid, minuteIsInvalid]);
+
+  useEffect(() => {
+    const errorMessages = [];
+    if (hourIsInvalid) {
+      errorMessages.push("Hour is invalid");
+    }
+    if (minuteIsInvalid) {
+      errorMessages.push("Minute is invalid");
+    }
+    setErrorMessages(errorMessages);
+  }, [hourIsInvalid, minuteIsInvalid]);
 
   return (
     <Flex alignItems="center" justifyContent="space-between">
@@ -45,7 +54,7 @@ const TimePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
           </Text>
           {isTimeIncomplete && (
             <FormErrorMessage fontSize="small">
-              This field is incomplete
+              {errorMessages[0]}
             </FormErrorMessage>
           )}
         </FormControl>
