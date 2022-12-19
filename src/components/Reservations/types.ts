@@ -5,7 +5,7 @@ export type ReservationsFormInputs = {
   day: string;
   yearOfReservation: string;
   hour: string;
-  minutes: string;
+  minute: string;
   amOrPm: string;
   noOfPersons: string;
 };
@@ -17,7 +17,7 @@ export type ErrorObject = {
   day: { message: string };
   yearOfReservation: { message: string };
   hour: { message: string };
-  minutes: { message: string };
+  minute: { message: string };
   amOrPm: { message: string };
   noOfPersons: { message: string };
 };

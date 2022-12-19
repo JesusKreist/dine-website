@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button, FormControl } from "@chakra-ui/react";
 import { useState } from "react";
 import iconPlus from "public/icons/icon-plus.svg";
 import iconMinus from "public/icons/icon-minus.svg";
@@ -14,12 +14,11 @@ const GuestInputIcon: React.FC<GuestInputIconProps> = ({
   alt,
   onClick,
 }) => (
-  <Box width="40px" height="40px">
+  <Box width="40px" height="40px" as="button" type="button">
     <Flex
       alignItems="center"
       justifyContent="center"
       onClick={onClick}
-      // border="2px solid black"
       borderRadius="none"
       bgColor="transparent"
       width="100%"
@@ -45,27 +44,29 @@ const GuestsNumberPicker = () => {
   };
 
   return (
-    <Flex
-      paddingInline="1rem"
-      borderBottomWidth="2px"
-      alignItems="center"
-      justifyContent="space-between"
-    >
-      <GuestInputIcon
-        alt="decrease value icon"
-        icon="icons/icon-minus.svg"
-        onClick={handleDecrement}
-      />
+    <Flex direction="column" gap="1rem">
+      <Flex
+        paddingInline="1rem"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <GuestInputIcon
+          alt="decrease value icon"
+          icon="icons/icon-minus.svg"
+          onClick={handleDecrement}
+        />
 
-      <Text fontWeight="bold">
-        {guests} {guests > 1 ? "people" : "person"}
-      </Text>
+        <Text fontWeight="bold">
+          {guests} {guests > 1 ? "people" : "person"}
+        </Text>
 
-      <GuestInputIcon
-        alt="increase value icon"
-        icon="icons/icon-plus.svg"
-        onClick={handleIncrement}
-      />
+        <GuestInputIcon
+          alt="increase value icon"
+          icon="icons/icon-plus.svg"
+          onClick={handleIncrement}
+        />
+      </Flex>
+      <Box borderBottomWidth="2px"></Box>
     </Flex>
   );
 };

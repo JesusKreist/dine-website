@@ -13,6 +13,7 @@ import { ReservationsInputProps } from "./types";
 const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const [isDateIncomplete, setIsDateIncomplete] = useState(false);
 
+  const [errorMessages, setErrorMessages] = useState<string[]>([]);
   const yearIsInvalid = !!errors.yearOfReservation;
   const monthIsInvalid = !!errors.month;
   const dayIsInvalid = !!errors.day;
@@ -28,6 +29,20 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
     setIsDateIncomplete(dateInputHasError);
   }, [dayIsInvalid, errors, isDateIncomplete, monthIsInvalid, yearIsInvalid]);
 
+  useEffect(() => {
+    const errorMessages = [];
+    if (yearIsInvalid) {
+      errorMessages.push("Year is invalid");
+    }
+    if (monthIsInvalid) {
+      errorMessages.push("Month is invalid");
+    }
+    if (dayIsInvalid) {
+      errorMessages.push("Day is invalid");
+    }
+    setErrorMessages(errorMessages);
+  }, [dayIsInvalid, monthIsInvalid, yearIsInvalid]);
+
   return (
     <Flex alignItems="center" justifyContent="space-between">
       <Box>
@@ -42,7 +57,7 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
           </Text>
           {isDateIncomplete && (
             <FormErrorMessage fontSize="small">
-              This field is incomplete
+              {errorMessages[0] ? errorMessages[0] : "This field is incomplete"}
             </FormErrorMessage>
           )}
         </FormControl>
