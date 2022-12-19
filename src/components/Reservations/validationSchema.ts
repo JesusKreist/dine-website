@@ -26,7 +26,6 @@ export const validationSchema = yup.object().shape({
   minute: yup
     .number()
     .required()
-    .min(1, "Hour is invalid.")
+    .min(0, "Hour is invalid.")
     .max(59, "Hour is invalid."),
-  amOrPm: yup.string().required("This field is required."),
 });
