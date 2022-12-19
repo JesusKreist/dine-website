@@ -1,14 +1,5 @@
-import {
-  Flex,
-  Grid,
-  Button,
-  Box,
-  Image,
-  FormControl,
-  FormErrorMessage,
-  Input,
-} from "@chakra-ui/react";
-import { FormEvent } from "react";
+import { Flex, Grid, Button, Box, Image, useToast } from "@chakra-ui/react";
+import { useEffect } from "react";
 import DatePicker from "./DatePicker";
 import EmailInput from "./EmailInput";
 import GuestsNumberPicker from "./GuestsNumberPicker";
@@ -23,18 +14,42 @@ const ReservationsForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<ReservationsFormInputs>({
     resolver: yupResolver(validationSchema),
     mode: "onSubmit",
   });
 
+  const toast = useToast();
+
   const onSubmit: SubmitHandler<ReservationsFormInputs> = (data) => {
+    console.log("submitted");
     console.log(data);
   };
 
-  console.log(watch("name"));
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset({
+        name: "",
+        email: "",
+        day: "",
+        hour: "",
+        minute: "",
+        month: "",
+        yearOfReservation: "",
+      });
+
+      toast({
+        title: "Reservation created.",
+        description: "We've made your reservation.",
+        status: "success",
+        duration: 4000,
+        isClosable: true,
+        position: "top",
+      });
+    }
+  }, [isSubmitSuccessful, reset, toast]);
 
   return (
     <Flex
