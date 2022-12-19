@@ -7,7 +7,7 @@ interface MainContainerProps {
 
 const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
   return (
-    <Box width={"1440px"} margin="auto">
+    <Box width={{ md: "768px", lg: "1440px" }} margin="auto" overflow="hidden">
       {children}
     </Box>
   );
