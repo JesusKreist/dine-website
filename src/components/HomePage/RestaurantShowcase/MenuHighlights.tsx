@@ -16,12 +16,18 @@ const MenuHighlights = () => {
     <Box
       bgColor="black"
       color="white"
-      paddingLeft="10rem"
-      paddingRight="10rem"
-      paddingTop="14rem"
-      paddingBottom="6rem"
+      paddingLeft={{ lg: "10rem" }}
+      paddingRight={{ lg: "10rem" }}
+      paddingTop={{ lg: "14rem" }}
+      paddingBottom={{ lg: "6rem" }}
+      height={{ md: "891px", lg: "unset" }}
     >
-      <Flex justifyContent="space-between">
+      <Flex
+        height={{ md: "100%", lg: "unset" }}
+        justifyContent={{ md: "space-evenly", lg: "space-between" }}
+        alignItems={{ md: "center", lg: "unset" }}
+        direction={{ md: "column", lg: "row" }}
+      >
         <RestaurantShowcaseText
           heading="A few highlights from our menu"
           text="We cater for all dietary requirements, but here's a glimpse at some 
