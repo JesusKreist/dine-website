@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Image, HStack } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, HStack, Flex } from "@chakra-ui/react";
 
 interface RestaurantShowcaseTextProps {
   heading: string;
@@ -14,13 +14,15 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
   withDivider = false,
 }) => {
   return (
-    <Box
-      display="flex"
+    <Flex
+      margin={{ md: "0 auto", lg: "unset" }}
       placeContent="center"
       flexDirection="column"
       maxWidth="445px"
-      rowGap="2rem"
-      paddingLeft={withLeftPadding ? "2rem" : "0"}
+      rowGap={{ md: "1rem", lg: "2rem" }}
+      paddingLeft={{ lg: withLeftPadding ? "2rem" : "0" }}
+      textAlign={{ md: "center", lg: "unset" }}
+      align={{ md: "center", lg: "unset" }}
     >
       {withDivider && (
         <Box maxWidth="100px" paddingTop="1rem" paddingBottom="1rem">
@@ -42,7 +44,7 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
       <Text fontWeight="normal" fontSize="20px" lineHeight="30px">
         {text}
       </Text>
-    </Box>
+    </Flex>
   );
 };
 

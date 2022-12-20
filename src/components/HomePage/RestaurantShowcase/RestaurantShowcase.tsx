@@ -8,13 +8,15 @@ import MenuHighlights from "./MenuHighlights";
 
 const RestaurantShowcase = () => {
   return (
-    <Box>
+    <Box className="showcase">
       <Grid
-        templateColumns="50% 50%"
+        templateColumns={{ lg: "50% 50%" }}
+        templateRows={{ md: "50% 50%", lg: "unset" }}
         marginTop="-5rem"
-        rowGap="8rem"
-        paddingLeft="10rem"
-        marginBottom="-5rem"
+        rowGap={{ md: "2.5rem", lg: "8rem" }}
+        paddingLeft={{ lg: "10rem" }}
+        marginBottom={{ lg: "-5rem" }}
+        paddingBottom={{ md: "8rem", lg: "unset" }}
       >
         <EnjoyablePlace />
         <LocalFood />
