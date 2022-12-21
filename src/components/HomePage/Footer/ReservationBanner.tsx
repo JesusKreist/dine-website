@@ -4,12 +4,21 @@ import React from "react";
 const ReservationBanner = () => {
   return (
     <Box
-      height="240px"
-      bgImage="/homepage/ready-bg-desktop@2x.jpg"
+      height={{ md: "272px", lg: "240px" }}
+      bgImage={{
+        md: "/homepage/ready-bg-tablet@2x.jpg",
+        lg: "/homepage/ready-bg-desktop@2x.jpg",
+      }}
       bgSize="contain"
-      paddingLeft="10rem"
+      paddingLeft={{ lg: "10rem" }}
     >
-      <Flex alignItems="center" height="100%" columnGap="16rem">
+      <Flex
+        alignItems="center"
+        height="100%"
+        gap={{ md: "2rem", lg: "16rem" }}
+        direction={{ md: "column", lg: "row" }}
+        justifyContent={{ md: "center", lg: "flex-start" }}
+      >
         <Heading
           fontWeight="bold"
           fontSize="48px"
