@@ -60,14 +60,13 @@ const ReservationsForm = () => {
       alignItems="center"
       justifyContent="center"
       position="relative"
-      boxShadow="xl"
+      boxShadow="2xl"
     >
       <Grid
         gridTemplateRows="repeat(6, 80px)"
         as="form"
         width="80%"
         fontSize="lg"
-        gap="rem"
         onSubmit={handleSubmit(onSubmit)}
       >
         <NameInput
@@ -91,7 +90,13 @@ const ReservationsForm = () => {
           MAKE RESERVATION
         </Button>
       </Grid>
-      <Box position="absolute" top="500px" left="-80px" zIndex="-1">
+      <Box
+        position="absolute"
+        top="500px"
+        left="-80px"
+        zIndex="-1"
+        display={{ md: "none", lg: "block" }}
+      >
         <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
       </Box>
     </Flex>
