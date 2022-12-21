@@ -21,6 +21,7 @@ const EventShowcaseText: React.FC<EventShowcaseTextProps> = ({
       maxWidth="445px"
       rowGap="1rem"
       paddingLeft={withLeftPadding ? "2rem" : "0"}
+      textAlign={{ md: "center", lg: "unset" }}
     >
       {withDivider && (
         <Box maxWidth="100px" paddingTop="1rem" paddingBottom="1rem">

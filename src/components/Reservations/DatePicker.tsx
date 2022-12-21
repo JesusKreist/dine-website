@@ -12,8 +12,8 @@ import { ReservationsInputProps } from "./types";
 
 const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const [isDateIncomplete, setIsDateIncomplete] = useState(false);
-
   const [errorMessages, setErrorMessages] = useState<string[]>([]);
+
   const yearIsInvalid = !!errors.yearOfReservation;
   const monthIsInvalid = !!errors.month;
   const dayIsInvalid = !!errors.day;

@@ -1,9 +1,50 @@
-import { Box, Heading, VStack } from "@chakra-ui/react";
+import { Box, Heading, VStack, Stack } from "@chakra-ui/react";
 import {
   familyGatheringEvent,
   socialEventsEvent,
   specialEventsEvent,
 } from "./EventsData";
+
+import React from "react";
+
+interface EventSelectorButtonProps {
+  onClick: React.MouseEventHandler<HTMLDivElement>;
+  currentEventId: number;
+  eventId: number;
+  text: string;
+}
+
+const EventSelectorButton: React.FC<EventSelectorButtonProps> = ({
+  onClick,
+  currentEventId,
+  eventId,
+  text,
+}) => {
+  return (
+    <VStack as="button" onClick={onClick}>
+      <Heading
+        as="h5"
+        fontSize="17px"
+        lineHeight="28px"
+        fontWeight="semibold"
+        color="#242b37"
+        letterSpacing="2.5px"
+        opacity={currentEventId === eventId ? 1 : 0.5}
+      >
+        {text}
+      </Heading>
+      <Box
+        display={{
+          md: currentEventId === eventId ? "block" : "none",
+          lg: "none",
+        }}
+        width={{ md: "48px", lg: "95px" }}
+        height="2px"
+        bgColor="#9e7f66"
+      ></Box>
+    </VStack>
+  );
+};
 
 interface EventSelectorProps {
   handleEventChange(event: any): void;
@@ -15,64 +56,38 @@ const EventSelector: React.FC<EventSelectorProps> = ({
   currentEventId,
 }) => {
   return (
-    <VStack alignItems="start">
-      <Box
-        as="button"
+    <Stack
+      alignItems="start"
+      direction={{ md: "row", lg: "column" }}
+      spacing={{ md: "5rem", lg: "1rem" }}
+    >
+      <EventSelectorButton
         onClick={() => {
           handleEventChange(familyGatheringEvent);
         }}
-      >
-        <Heading
-          as="h5"
-          fontSize="17px"
-          lineHeight="28px"
-          fontWeight="semibold"
-          color="#242b37"
-          letterSpacing=".25ch"
-          opacity={currentEventId === 1 ? 1 : 0.5}
-        >
-          FAMILY GATHERING
-        </Heading>
-      </Box>
+        currentEventId={currentEventId}
+        eventId={1}
+        text="FAMILY GATHERING"
+      />
 
-      <Box
-        as="button"
+      <EventSelectorButton
         onClick={() => {
           handleEventChange(specialEventsEvent);
         }}
-      >
-        <Heading
-          as="h5"
-          fontSize="17px"
-          lineHeight="28px"
-          fontWeight="semibold"
-          color="#242b37"
-          letterSpacing=".25ch"
-          opacity={currentEventId === 2 ? 1 : 0.5}
-        >
-          SPECIAL EVENTS
-        </Heading>
-      </Box>
+        currentEventId={currentEventId}
+        eventId={2}
+        text=" SPECIAL EVENTS"
+      />
 
-      <Box
-        as="button"
+      <EventSelectorButton
         onClick={() => {
           handleEventChange(socialEventsEvent);
         }}
-      >
-        <Heading
-          as="h5"
-          fontSize="17px"
-          lineHeight="28px"
-          fontWeight="semibold"
-          color="#242b37"
-          letterSpacing=".25ch"
-          opacity={currentEventId === 3 ? 1 : 0.5}
-        >
-          SOCIAL EVENTS
-        </Heading>
-      </Box>
-    </VStack>
+        currentEventId={currentEventId}
+        eventId={3}
+        text=" SOCIAL EVENTS"
+      />
+    </Stack>
   );
 };
 
