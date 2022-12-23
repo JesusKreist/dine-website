@@ -15,6 +15,7 @@ const Events = () => {
         alt="curve pattern"
         objectFit="cover"
         objectPosition="top right"
+        display={{ base: "none", md: "block" }}
       />
 
       <Box
@@ -22,12 +23,13 @@ const Events = () => {
         position="relative"
         marginLeft={{ md: "3rem", lg: "8rem" }}
         bottom={{ md: "14.5rem", lg: "11.5rem" }}
+        display={{ base: "none", md: "block" }}
       >
         <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
       </Box>
 
       <Box
-        display={{ md: "none", lg: "block" }}
+        display={{ base: "none", lg: "block" }}
         width={{ md: "48px", lg: "95px" }}
         height="2px"
         bgColor="#9e7f66"

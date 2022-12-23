@@ -15,8 +15,8 @@ const LocalFood = () => {
 
       <Box
         position="relative"
-        height={{ base: "400px", md: "360px", lg: "720px" }}
-        width={{ base: "327px", md: "573px", lg: "unset" }}
+        height={{ md: "360px", lg: "720px" }}
+        width={{ base: "85%", md: "573px", lg: "unset" }}
         margin={{ base: "0 auto", lg: "unset" }}
       >
         <Box as="picture">
