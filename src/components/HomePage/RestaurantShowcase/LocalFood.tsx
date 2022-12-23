@@ -75,7 +75,7 @@ const LocalFood = () => {
       <Box
         display={{ base: "flex", lg: "none" }}
         zIndex="2"
-        paddingBottom="7.5rem"
+        paddingBottom={{ base: "7.5rem", md: "unset" }}
       >
         <RestaurantShowcaseText
           heading="The most locally sourced food"

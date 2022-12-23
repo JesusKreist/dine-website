@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Text,
-  VStack,
-  HStack,
-  Flex,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 import Logo from "../logo/Logo";
 
 const IntroSection = () => {
