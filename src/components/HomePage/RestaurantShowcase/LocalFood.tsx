@@ -31,6 +31,7 @@ const LocalFood = () => {
             srcSet="/homepage/locally-sourced-tablet@2x.jpg"
           ></Box>
           <Image
+            boxShadow="2xl"
             src="/homepage/locally-sourced-desktop@2x.jpg"
             alt="image showing locally sourced food"
             objectFit="contain"

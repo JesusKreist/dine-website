@@ -11,7 +11,28 @@ const EnjoyablePlace = () => {
         width={{ base: "327px", md: "573px", lg: "unset" }}
         margin={{ base: "0 auto", lg: "unset" }}
       >
-        <Image
+        <Box as="picture">
+          <Box
+            as="source"
+            media="(max-width: 400px)"
+            srcSet="/homepage/enjoyable-place-mobile@2x.jpg"
+          ></Box>
+          <Box
+            as="source"
+            media="(min-width: 400px) and (max-width: 1200px)"
+            srcSet="/homepage/enjoyable-place-tablet@2x.jpg"
+          ></Box>
+          <Image
+            boxShadow="2xl"
+            src="/homepage/enjoyable-place-desktop@2x.jpg"
+            alt="image describing the location for the family"
+            objectFit="contain"
+            height="100%"
+            margin={{ base: "0 auto", lg: "unset" }}
+          />
+        </Box>
+
+        {/* <Image
           srcSet="/homepage/enjoyable-place-mobile@2x.jpg 327w, /homepage/enjoyable-place-tablet@2x.jpg 768w, /homepage/enjoyable-place-desktop@2x.jpg 1440w"
           sizes="(max-width: 327px) 327px, (max-width: 1200px) 768px, 1440px"
           src="/homepage/enjoyable-place-desktop@2x.jpg"
@@ -19,7 +40,7 @@ const EnjoyablePlace = () => {
           objectFit="cover"
           height="100%"
           margin={{ base: "0 auto", lg: "unset" }}
-        />
+        /> */}
         <Box
           display={{ base: "none", md: "block" }}
           width={{ md: "500px", lg: "895px" }}
