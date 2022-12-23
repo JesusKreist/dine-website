@@ -42,7 +42,7 @@ const Events = () => {
         gap={{ base: "2rem", md: "3.5rem", lg: "7rem" }}
         paddingLeft={{ lg: "10rem" }}
         marginTop={{ base: "5rem", md: "-275px", lg: "-220px" }}
-        paddingBottom={{ md: "5rem", lg: "10rem" }}
+        paddingBottom={{ base: "5rem", lg: "10rem" }}
         alignItems="center"
         direction={{ base: "column", lg: "row" }}
       >
