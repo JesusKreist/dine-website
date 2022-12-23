@@ -39,22 +39,35 @@ const Events = () => {
       ></Box>
 
       <Flex
-        gap={{ md: "3.5rem", lg: "7rem" }}
+        gap={{ base: "2rem", md: "3.5rem", lg: "7rem" }}
         paddingLeft={{ lg: "10rem" }}
-        marginTop={{ md: "-275px", lg: "-220px" }}
+        marginTop={{ base: "5rem", md: "-275px", lg: "-220px" }}
         paddingBottom={{ md: "5rem", lg: "10rem" }}
         alignItems="center"
-        direction={{ md: "column", lg: "row" }}
+        direction={{ base: "column", lg: "row" }}
       >
-        <Image
-          width={{ md: "573px", lg: "540px" }}
-          height={{ md: "360px", lg: "600px" }}
-          srcSet={`${event.imageUrlTablet} 768w, ${event.imageUrl} 1440w`}
-          sizes="(max-width: 1200px) 768px, 1440px"
-          src={event.imageUrl}
-          alt="family gathering image"
-          objectFit="contain"
-        />
+        <Box as="picture">
+          <Box
+            as="source"
+            media="(max-width: 400px)"
+            srcSet={event.imageUrlMobile}
+          ></Box>
+          <Box
+            as="source"
+            media="(min-width: 400px) and (max-width: 1200px)"
+            srcSet={event.imageUrlTablet}
+          ></Box>
+          <Image
+            boxShadow="2xl"
+            width={{ base: "85%", md: "573px", lg: "540px" }}
+            height={{ md: "360px", lg: "600px" }}
+            src={event.imageUrl}
+            alt={`${event.title} event image`}
+            objectFit="contain"
+            margin={{ base: "0 auto", lg: "unset" }}
+          />
+        </Box>
+
         <CurrentEvent {...event} handleEventChange={setEvent} />
       </Flex>
     </Fragment>

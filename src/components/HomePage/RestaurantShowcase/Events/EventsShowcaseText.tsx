@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Image, HStack } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, HStack, Flex } from "@chakra-ui/react";
 
 interface EventShowcaseTextProps {
   heading: string;
@@ -14,14 +14,15 @@ const EventShowcaseText: React.FC<EventShowcaseTextProps> = ({
   withDivider = false,
 }) => {
   return (
-    <Box
-      display="flex"
+    <Flex
+      margin={{ base: "0 auto", lg: "unset" }}
       placeContent="center"
       flexDirection="column"
-      maxWidth="445px"
-      rowGap="1rem"
-      paddingLeft={withLeftPadding ? "2rem" : "0"}
-      textAlign={{ md: "center", lg: "unset" }}
+      maxWidth={{ base: "327px", md: "445px" }}
+      rowGap={{ base: "2rem", md: "1rem", lg: "2rem" }}
+      paddingLeft={{ lg: withLeftPadding ? "2rem" : "0" }}
+      textAlign={{ base: "center", lg: "left" }}
+      align={{ base: "center", lg: "unset" }}
     >
       {withDivider && (
         <Box maxWidth="100px" paddingTop="1rem" paddingBottom="1rem">
@@ -34,16 +35,21 @@ const EventShowcaseText: React.FC<EventShowcaseTextProps> = ({
       )}
       <Heading
         fontWeight="bold"
-        fontSize="48px"
-        lineHeight="48px"
-        maxWidth="400px"
+        fontSize={{ base: "42px", md: "48px" }}
+        lineHeight={{ base: "40px", md: "48px" }}
+        letterSpacing={{ base: "-0.4px", md: "unset" }}
+        maxWidth={{ base: "327px", md: "400px" }}
       >
         {heading}
       </Heading>
-      <Text fontWeight="normal" fontSize="20px" lineHeight="30px">
+      <Text
+        fontWeight="regular"
+        fontSize={{ base: "18px", md: "20px" }}
+        lineHeight="30px"
+      >
         {text}
       </Text>
-    </Box>
+    </Flex>
   );
 };
 

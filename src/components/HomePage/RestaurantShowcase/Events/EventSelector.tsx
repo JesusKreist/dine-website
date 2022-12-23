@@ -21,7 +21,7 @@ const EventSelectorButton: React.FC<EventSelectorButtonProps> = ({
   text,
 }) => {
   return (
-    <VStack as="button" onClick={onClick}>
+    <VStack as="button" onClick={onClick} spacing="0">
       <Heading
         as="h5"
         fontSize="17px"
@@ -35,11 +35,11 @@ const EventSelectorButton: React.FC<EventSelectorButtonProps> = ({
       </Heading>
       <Box
         display={{
-          md: currentEventId === eventId ? "block" : "none",
+          base: currentEventId === eventId ? "block" : "none",
           lg: "none",
         }}
-        width={{ md: "48px", lg: "95px" }}
-        height="2px"
+        width={{ base: "48px", lg: "95px" }}
+        height={{ base: "2px", md: "2px" }}
         bgColor="#9e7f66"
       ></Box>
     </VStack>
@@ -57,9 +57,9 @@ const EventSelector: React.FC<EventSelectorProps> = ({
 }) => {
   return (
     <Stack
-      alignItems="start"
-      direction={{ md: "row", lg: "column" }}
-      spacing={{ md: "5rem", lg: "1rem" }}
+      alignItems={{ base: "center", md: "start" }}
+      direction={{ base: "column", md: "row", lg: "column" }}
+      spacing={{ base: "1rem", md: "5rem", lg: "1rem" }}
     >
       <EventSelectorButton
         onClick={() => {
