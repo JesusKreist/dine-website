@@ -11,9 +11,8 @@ const RestaurantShowcase = () => {
     <Box className="showcase">
       <Grid
         templateColumns={{ lg: "50% 50%" }}
-        templateRows={{ md: "50% 50%", lg: "unset" }}
         marginTop={{ base: "-5rem", md: "-5rem" }}
-        rowGap={{ md: "2.5rem", lg: "8rem" }}
+        rowGap={{ base: "2.5rem", md: "2.5rem", lg: "8rem" }}
         paddingLeft={{ lg: "10rem" }}
         marginBottom={{ lg: "-5rem" }}
         paddingBottom={{ md: "8rem", lg: "unset" }}

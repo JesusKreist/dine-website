@@ -38,13 +38,15 @@ const EnjoyablePlace = () => {
         </Box>
       </Box>
 
-      <RestaurantShowcaseText
-        heading="Enjoyable place for all the family"
-        text="Our relaxed surroundings make dining with us a great experience for
+      <Box display="flex" paddingBottom={{ base: "5rem", md: "unset" }}>
+        <RestaurantShowcaseText
+          heading="Enjoyable place for all the family"
+          text="Our relaxed surroundings make dining with us a great experience for
         everyone. We can even arrange a tour of the farm before your meal."
-        withLeftPadding
-        withDivider
-      />
+          withLeftPadding
+          withDivider
+        />
+      </Box>
     </Fragment>
   );
 };

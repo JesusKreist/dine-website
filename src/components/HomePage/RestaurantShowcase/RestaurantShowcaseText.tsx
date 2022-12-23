@@ -21,7 +21,7 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
       maxWidth={{ base: "327px", md: "445px" }}
       rowGap={{ base: "2rem", md: "1rem", lg: "2rem" }}
       paddingLeft={{ lg: withLeftPadding ? "2rem" : "0" }}
-      textAlign={{ base: "center", lg: "unset" }}
+      textAlign={{ base: "center", lg: "left" }}
       align={{ base: "center", lg: "unset" }}
     >
       {withDivider && (

@@ -1,11 +1,11 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Flex } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import RestaurantShowcaseText from "./RestaurantShowcaseText";
 
 const LocalFood = () => {
   return (
     <Fragment>
-      <Box display={{ md: "none", lg: "block" }}>
+      <Box display={{ base: "none", lg: "flex" }}>
         <RestaurantShowcaseText
           heading="The most locally sourced food"
           text="All our ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food."
@@ -15,19 +15,30 @@ const LocalFood = () => {
 
       <Box
         position="relative"
-        height={{ md: "360px", lg: "720px" }}
-        width={{ md: "573px", lg: "unset" }}
-        margin={{ md: "0 auto", lg: "unset" }}
+        height={{ base: "400px", md: "360px", lg: "720px" }}
+        width={{ base: "327px", md: "573px", lg: "unset" }}
+        margin={{ base: "0 auto", lg: "unset" }}
       >
-        <Image
-          srcSet="/homepage/locally-sourced-tablet@2x.jpg 768w, /homepage/locally-sourced-desktop@2x.jpg 1440w"
-          sizes="(max-width: 1200px) 768px, 1440px"
-          src="/homepage/locally-sourced-desktop@2x.jpg"
-          alt="image showing locally sourced food"
-          objectFit="contain"
-          height="100%"
-          marginLeft={{ lg: "-4rem" }}
-        />
+        <Box as="picture">
+          <Box
+            as="source"
+            media="(max-width: 400px)"
+            srcSet="/homepage/locally-sourced-mobile@2x.jpg"
+          ></Box>
+          <Box
+            as="source"
+            media="(min-width: 400px) and (max-width: 1200px)"
+            srcSet="/homepage/locally-sourced-tablet@2x.jpg"
+          ></Box>
+          <Image
+            src="/homepage/locally-sourced-desktop@2x.jpg"
+            alt="image showing locally sourced food"
+            objectFit="contain"
+            height="100%"
+            marginLeft={{ lg: "-4rem" }}
+          />
+        </Box>
+
         <Box
           position="relative"
           bottom={{ md: "-290px", lg: "unset" }}
@@ -37,6 +48,7 @@ const LocalFood = () => {
           width={{ lg: "895px" }}
           marginLeft={{ md: "-14rem", lg: "-16rem" }}
           height={{ md: "320px", lg: "unset" }}
+          display={{ base: "none", md: "block" }}
         >
           <Image
             src="patterns/pattern-curve-top-left.svg"
@@ -54,11 +66,16 @@ const LocalFood = () => {
           position="relative"
           bottom={{ md: "450px", lg: "760px" }}
           marginLeft={{ md: "29rem", lg: "27rem" }}
+          display={{ base: "none", md: "block" }}
         >
           <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
         </Box>
       </Box>
-      <Box display={{ md: "block", lg: "none" }} zIndex="2">
+      <Box
+        display={{ base: "flex", lg: "none" }}
+        zIndex="2"
+        paddingBottom="7.5rem"
+      >
         <RestaurantShowcaseText
           heading="The most locally sourced food"
           text="All our ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food."
