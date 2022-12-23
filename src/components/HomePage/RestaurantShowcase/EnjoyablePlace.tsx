@@ -7,19 +7,21 @@ const EnjoyablePlace = () => {
     <Fragment>
       <Box
         position="relative"
-        height={{ md: "360px", lg: "720px" }}
-        width={{ md: "573px", lg: "unset" }}
-        margin={{ md: "0 auto", lg: "unset" }}
+        height={{ base: "400px", md: "360px", lg: "720px" }}
+        width={{ base: "327px", md: "573px", lg: "unset" }}
+        margin={{ base: "0 auto", lg: "unset" }}
       >
         <Image
-          srcSet="/homepage/enjoyable-place-tablet@2x.jpg 768w, /homepage/enjoyable-place-desktop@2x.jpg 1440w"
-          sizes="(max-width: 1200px) 768px, 1440px"
+          srcSet="/homepage/enjoyable-place-mobile@2x.jpg 327w, /homepage/enjoyable-place-tablet@2x.jpg 768w, /homepage/enjoyable-place-desktop@2x.jpg 1440w"
+          sizes="(max-width: 327px) 327px, (max-width: 1200px) 768px, 1440px"
           src="/homepage/enjoyable-place-desktop@2x.jpg"
           alt="image describing the location for the family"
           objectFit="cover"
           height="100%"
+          margin={{ base: "0 auto", lg: "unset" }}
         />
         <Box
+          display={{ base: "none", md: "block" }}
           width={{ md: "500px", lg: "895px" }}
           marginLeft={{ md: "-14rem", lg: "-10rem" }}
           height={{ md: "320px", lg: "unset" }}

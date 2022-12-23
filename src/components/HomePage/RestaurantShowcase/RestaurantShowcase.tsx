@@ -12,7 +12,7 @@ const RestaurantShowcase = () => {
       <Grid
         templateColumns={{ lg: "50% 50%" }}
         templateRows={{ md: "50% 50%", lg: "unset" }}
-        marginTop="-5rem"
+        marginTop={{ base: "-5rem", md: "-5rem" }}
         rowGap={{ md: "2.5rem", lg: "8rem" }}
         paddingLeft={{ lg: "10rem" }}
         marginBottom={{ lg: "-5rem" }}

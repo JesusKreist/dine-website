@@ -15,14 +15,14 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
 }) => {
   return (
     <Flex
-      margin={{ md: "0 auto", lg: "unset" }}
+      margin={{ base: "0 auto", lg: "unset" }}
       placeContent="center"
       flexDirection="column"
-      maxWidth="445px"
-      rowGap={{ md: "1rem", lg: "2rem" }}
+      maxWidth={{ base: "327px", md: "445px" }}
+      rowGap={{ base: "2rem", md: "1rem", lg: "2rem" }}
       paddingLeft={{ lg: withLeftPadding ? "2rem" : "0" }}
-      textAlign={{ md: "center", lg: "unset" }}
-      align={{ md: "center", lg: "unset" }}
+      textAlign={{ base: "center", lg: "unset" }}
+      align={{ base: "center", lg: "unset" }}
     >
       {withDivider && (
         <Box maxWidth="100px" paddingTop="1rem" paddingBottom="1rem">
@@ -35,13 +35,18 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
       )}
       <Heading
         fontWeight="bold"
-        fontSize="48px"
-        lineHeight="48px"
-        maxWidth="400px"
+        fontSize={{ base: "42px", md: "48px" }}
+        lineHeight={{ base: "40px", md: "48px" }}
+        letterSpacing={{ base: "-0.4px", md: "unset" }}
+        maxWidth={{ base: "327px", md: "400px" }}
       >
         {heading}
       </Heading>
-      <Text fontWeight="normal" fontSize="20px" lineHeight="30px">
+      <Text
+        fontWeight="regular"
+        fontSize={{ base: "18px", md: "20px" }}
+        lineHeight="30px"
+      >
         {text}
       </Text>
     </Flex>
