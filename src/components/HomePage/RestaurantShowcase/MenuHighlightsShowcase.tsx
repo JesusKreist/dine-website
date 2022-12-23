@@ -4,26 +4,48 @@ import React from "react";
 interface MenuHighlightsShowcaseProps {
   heading: string;
   text: string;
-  imageSrc: string;
+  imageName: string;
 }
 
 const MenuHighlightsShowcase: React.FC<MenuHighlightsShowcaseProps> = ({
   heading,
   text,
-  imageSrc,
+  imageName,
 }) => {
   return (
-    <Flex columnGap="2rem" zIndex="2">
+    <Flex
+      gap="2rem"
+      zIndex="2"
+      direction={{ base: "column", md: "row" }}
+      width={{ base: "90%", md: "unset" }}
+    >
       <Flex>
-        <Box>
+        <Box as="picture">
+          <Box
+            as="source"
+            media="(max-width: 400px)"
+            srcSet={`homepage/${imageName}-mobile@2x.jpg`}
+          ></Box>
+          <Box
+            as="source"
+            media="(min-width: 400px) and (max-width: 1200px)"
+            srcSet={`homepage/${imageName}-desktop-tablet@2x.jpg`}
+          ></Box>
           <Image
             position="relative"
             alt="seared salmon fillet"
-            src={imageSrc}
+            src={`homepage/${imageName}-desktop-tablet@2x.jpg`}
+            width={{ base: "100%", md: "128px", lg: "128px" }}
           />
         </Box>
 
-        <Box maxWidth="100px" marginLeft="-3rem" paddingTop="1rem" zIndex="-1">
+        <Box
+          maxWidth="100px"
+          marginLeft="-3rem"
+          paddingTop="1rem"
+          zIndex="-1"
+          display={{ base: "none", md: "initial" }}
+        >
           <Image
             src="patterns/pattern-divide.svg"
             alt="divider image"
@@ -32,11 +54,22 @@ const MenuHighlightsShowcase: React.FC<MenuHighlightsShowcaseProps> = ({
         </Box>
       </Flex>
 
-      <Box maxWidth="350px" alignSelf="center">
-        <Heading as="h3" fontSize="20px" lineHeight="24px">
+      <Box
+        maxWidth={{ base: "327px", md: "350px" }}
+        alignSelf="center"
+        textAlign={{ base: "center", md: "left" }}
+      >
+        <Heading
+          as="h3"
+          fontSize="26px"
+          lineHeight="24px"
+          paddingBottom={{ base: "1rem", md: "unset" }}
+        >
           {heading}
         </Heading>
-        <Text as="p">{text}</Text>
+        <Text as="p" fontSize="18px" lineHeight="26px">
+          {text}
+        </Text>
       </Box>
     </Flex>
   );

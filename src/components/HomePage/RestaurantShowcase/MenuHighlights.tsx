@@ -11,6 +11,12 @@ import React, { Fragment } from "react";
 import MenuHighlightsShowcase from "./MenuHighlightsShowcase";
 import RestaurantShowcaseText from "./RestaurantShowcaseText";
 
+const HighLightDivider = () => (
+  <Box opacity="0.9" width={{ base: "90%", md: "100%" }}>
+    <Divider />
+  </Box>
+);
+
 const MenuHighlights = () => {
   return (
     <Box
@@ -18,15 +24,16 @@ const MenuHighlights = () => {
       color="white"
       paddingLeft={{ lg: "10rem" }}
       paddingRight={{ lg: "10rem" }}
-      paddingTop={{ lg: "14rem" }}
-      paddingBottom={{ lg: "6rem" }}
+      paddingTop={{ base: "5rem", md: "unset", lg: "14rem" }}
+      paddingBottom={{ base: "5rem", md: "unset", lg: "6rem" }}
       height={{ md: "891px", lg: "unset" }}
     >
       <Flex
         height={{ md: "100%", lg: "unset" }}
-        justifyContent={{ md: "space-evenly", lg: "space-between" }}
+        justifyContent={{ base: "space-evenly", lg: "space-between" }}
         alignItems={{ md: "center", lg: "unset" }}
-        direction={{ md: "column", lg: "row" }}
+        direction={{ base: "column", lg: "row" }}
+        gap={{ base: "8rem", md: "unset" }}
       >
         <RestaurantShowcaseText
           heading="A few highlights from our menu"
@@ -40,27 +47,23 @@ const MenuHighlights = () => {
               heading="Seared Salmon Filet"
               text="Our locally sourced salmon served with a refreshing buckwheat summer
           salad."
-              imageSrc="homepage/salmon-desktop-tablet.jpg"
+              imageName="salmon"
             />
 
-            <Box opacity="0.9" width="100%">
-              <Divider />
-            </Box>
+            <HighLightDivider />
 
             <MenuHighlightsShowcase
               heading="Rosemary Filet Mignon"
               text="Our prime beef served to your taste with a delicious choice of seasonal sides."
-              imageSrc="homepage/beef-desktop-tablet.jpg"
+              imageName="beef"
             />
 
-            <Box opacity="0.9" width="100%">
-              <Divider />
-            </Box>
+            <HighLightDivider />
 
             <MenuHighlightsShowcase
               heading="Summer Fruit Chocolate Mousse"
               text="Creamy mousse combined with summer fruits and dark chocolate servings."
-              imageSrc="homepage/chocolate-desktop-tablet.jpg"
+              imageName="chocolate"
             />
           </VStack>
         </Box>
