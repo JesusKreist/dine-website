@@ -1,4 +1,5 @@
 import { VStack, Button, Box, Stack } from "@chakra-ui/react";
+import LinkButton from "../../../Navigation/LinkButton";
 import EventSelector from "./EventSelector";
 import EventShowcaseText from "./EventsShowcaseText";
 
@@ -31,9 +32,7 @@ const CurrentEvent: React.FC<CurrentEventProps> = ({
           <EventShowcaseText heading={title} text={description} />
         </Box>
 
-        <Box>
-          <Button variant="brandPrimaryOnLight">BOOK A TABLE</Button>
-        </Box>
+        <LinkButton variant="light" />
       </VStack>
 
       <Box>
@@ -47,34 +46,3 @@ const CurrentEvent: React.FC<CurrentEventProps> = ({
 };
 
 export default CurrentEvent;
-
-// import { VStack, Button, Box } from "@chakra-ui/react";
-// import EventSelector from "./EventSelector";
-// import EventShowcaseText from "./EventsShowcaseText";
-
-// interface CurrentEventProps {
-//   id: number;
-//   title: string;
-//   description: string;
-//   handleEventChange(event: any): void;
-// }
-
-// const CurrentEvent: React.FC<CurrentEventProps> = ({
-//   id,
-//   title,
-//   description,
-//   handleEventChange,
-// }) => {
-//   return (
-//     <VStack alignItems="start" spacing="2rem">
-//       {/* <Box display={{ lg: "none" }} position={{ lg: "absolute" }}>
-//         <EventSelector
-//           handleEventChange={handleEventChange}
-//           currentEventId={id}
-//         />
-//       </Box> */}
-
-//   );
-// };
-
-// export default CurrentEvent;

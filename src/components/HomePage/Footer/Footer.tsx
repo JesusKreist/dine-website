@@ -1,4 +1,4 @@
-import { Flex, Heading, Button, Box, VStack, Text } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
 import React from "react";
 import Logo from "../../logo/Logo";
 

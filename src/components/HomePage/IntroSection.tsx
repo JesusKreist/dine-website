@@ -1,5 +1,8 @@
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 import Logo from "../logo/Logo";
+import LinkButton from "../Navigation/LinkButton";
+
+//
 
 const IntroSection = () => {
   return (
@@ -47,9 +50,7 @@ const IntroSection = () => {
           Experience our seasonal menu in beautiful country surroundings. Eat
           the freshest produce from the comfort of our farmhouse.
         </Text>
-        <Button width="245px" variant="brandPrimaryOnDark" height="64px">
-          BOOK A TABLE
-        </Button>
+        <LinkButton variant="dark" />
       </Flex>
     </Box>
   );

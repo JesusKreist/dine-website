@@ -17,7 +17,7 @@ const MenuHighlightsShowcase: React.FC<MenuHighlightsShowcaseProps> = ({
       gap="2rem"
       zIndex="2"
       direction={{ base: "column", md: "row" }}
-      width={{ base: "90%", md: "unset" }}
+      width={{ base: "85%", md: "unset" }}
     >
       <Flex>
         <Box as="picture">

@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
+import LinkButton from "../../Navigation/LinkButton";
 
 const ReservationBanner = () => {
   return (
@@ -30,7 +31,7 @@ const ReservationBanner = () => {
         >
           Ready to make a reservation?
         </Heading>
-        <Button variant="brandPrimaryOnDark">BOOK A TABLE</Button>
+        <LinkButton variant="dark" />
       </Flex>
     </Box>
   );
