@@ -6,25 +6,16 @@ export interface LinkButtonProps {
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({ variant }) => {
-  //   let button;
-  //   if (buttonColorVariant === "light") {
-  //     button = <Button variant="brandPrimaryOnLight">BOOK A TABLE</Button>;
-  //   } else if (buttonColorVariant === "dark") {
-  //     button = <Button variant="brandPrimaryOnDark">BOOK A TABLE</Button>;
-  //   }
-
   return (
-    <>
-      {variant === "light" ? (
-        <Button width="245px" height="64px" variant="brandPrimaryOnLight">
-          BOOK A TABLE
-        </Button>
-      ) : (
-        <Button width="245px" height="64px" variant="brandPrimaryOnDark">
-          BOOK A TABLE
-        </Button>
-      )}
-    </>
+    <Button
+      width="245px"
+      height="64px"
+      variant={
+        variant === "light" ? "brandPrimaryOnLight" : "brandPrimaryOnDark"
+      }
+    >
+      BOOK A TABLE
+    </Button>
   );
 };
 
