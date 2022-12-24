@@ -1,4 +1,5 @@
 import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 export interface LinkButtonProps {
@@ -7,15 +8,17 @@ export interface LinkButtonProps {
 
 const LinkButton: React.FC<LinkButtonProps> = ({ variant }) => {
   return (
-    <Button
-      width="245px"
-      height="64px"
-      variant={
-        variant === "light" ? "brandPrimaryOnLight" : "brandPrimaryOnDark"
-      }
-    >
-      BOOK A TABLE
-    </Button>
+    <Link href="/reservations">
+      <Button
+        width="245px"
+        height="64px"
+        variant={
+          variant === "light" ? "brandPrimaryOnLight" : "brandPrimaryOnDark"
+        }
+      >
+        BOOK A TABLE
+      </Button>
+    </Link>
   );
 };
 
