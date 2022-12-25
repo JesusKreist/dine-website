@@ -19,7 +19,11 @@ const AmOrPmSelectBox = () => {
   };
 
   return (
-    <FormControl width="97px" position="relative" borderBottomWidth="2px">
+    <FormControl
+      width={{ base: "88px", md: "97px" }}
+      position="relative"
+      borderBottomWidth="2px"
+    >
       <Flex height="100%" justifyContent="center" alignItems="center">
         <Text width="35px">{isAM ? "AM" : "PM"}</Text>
         <Box as="button" type="button" width="16px" onClick={togglePopover}>

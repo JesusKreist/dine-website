@@ -44,19 +44,30 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   }, [dayIsInvalid, monthIsInvalid, yearIsInvalid]);
 
   return (
-    <Flex alignItems="center" justifyContent="space-between">
-      <Box>
+    <Flex
+      alignItems="center"
+      justifyContent="space-between"
+      gap={{ base: "0.5rem", md: "unset" }}
+      direction={{ base: "column", md: "row" }}
+      width={{ base: "100%", md: "unset" }}
+    >
+      <Box alignSelf={{ base: "start", md: "unset" }}>
         <FormControl isInvalid={isDateIncomplete}>
           <Text
             fontSize="lg"
-            paddingTop={isDateIncomplete ? "1rem" : "unset"}
+            paddingTop={
+              isDateIncomplete ? { base: "0.5rem", md: "1rem" } : "unset"
+            }
             lineHeight="initial"
             color={isDateIncomplete ? "red" : "unset"}
           >
             Pick a date
           </Text>
           {isDateIncomplete && (
-            <FormErrorMessage fontSize="small">
+            <FormErrorMessage
+              fontSize="small"
+              display={{ base: "none", md: "block" }}
+            >
               {errorMessages[0] ? errorMessages[0] : "This field is incomplete"}
             </FormErrorMessage>
           )}
@@ -70,9 +81,9 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
             autoComplete="month"
             placeholder="MM"
             id="month"
+            size="lg"
             variant="flushed"
             borderBottomWidth="2px"
-            size="lg"
             paddingLeft="1rem"
             color={monthIsInvalid ? "red" : "unset"}
             {...register("month")}
@@ -85,9 +96,9 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
             autoComplete="day"
             placeholder="DD"
             id="day"
+            size="lg"
             variant="flushed"
             borderBottomWidth="2px"
-            size="lg"
             paddingLeft="1rem"
             color={dayIsInvalid ? "red" : "unset"}
             {...register("day")}
@@ -99,9 +110,9 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
             type="text"
             placeholder="YYYY"
             id="year_date"
+            size="lg"
             variant="flushed"
             borderBottomWidth="2px"
-            size="lg"
             paddingLeft="1rem"
             color={yearIsInvalid ? "red" : "unset"}
             {...register("yearOfReservation")}

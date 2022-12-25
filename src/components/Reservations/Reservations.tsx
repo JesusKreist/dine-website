@@ -8,25 +8,30 @@ import ReservationsHeroText from "./ReservationsHeroText";
 const Reservations = () => {
   return (
     <Grid>
-      <GridItem
+      <Flex
         paddingLeft={{ lg: "10rem" }}
-        height={{ md: "600px", lg: "600px" }}
+        height={{ base: "80vh", md: "600px", lg: "600px" }}
         bgImage={{
+          base: "booking/hero-bg-mobile@2x.jpg",
           md: "booking/hero-bg-tablet@2x.jpg",
           lg: "booking/hero-bg-desktop@2x.jpg",
         }}
-        bgSize="contain"
-        marginBottom={{ md: "450px", lg: "unset" }}
+        bgPosition="center"
+        bgSize="cover"
+        marginBottom={{ base: "585px", md: "450px", lg: "unset" }}
+        direction={{ base: "column", md: "column", lg: "row" }}
+        alignItems={{ base: "center", md: "unset" }}
+        gap={{ base: "2.5rem", md: "unset" }}
       >
         <Box
           marginLeft={{ md: "3rem", lg: "unset" }}
-          marginTop={{ md: "4rem", lg: "unset" }}
+          marginTop={{ base: "4rem", lg: "unset" }}
         >
           <Logo />
         </Box>
 
         <Flex
-          direction={{ md: "column", lg: "row" }}
+          direction={{ base: "column", md: "column", lg: "row" }}
           gap={{ md: "3rem", lg: "7rem" }}
           marginTop={{ md: "4rem", lg: "9rem" }}
           alignItems={{ md: "center", lg: "unset" }}
@@ -34,8 +39,8 @@ const Reservations = () => {
           <ReservationsHeroText />
           <ReservationsForm />
         </Flex>
-      </GridItem>
-      <GridItem display={{ md: "none", lg: "unset" }}>
+      </Flex>
+      <GridItem display={{ base: "none", lg: "unset" }}>
         <Image
           width="993px"
           height="320px"

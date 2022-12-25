@@ -29,22 +29,23 @@ const GuestInputIcon: React.FC<GuestInputIconProps> = ({
   </Box>
 );
 
-const GuestsNumberPicker = () => {
-  const [guests, setGuests] = useState(1);
-
-  const handleIncrement = (event: React.FormEvent) => {
-    event.preventDefault();
-    setGuests(guests + 1);
-  };
-
-  const handleDecrement = (event: React.FormEvent) => {
-    event.preventDefault();
-    if (guests === 1) return;
-    setGuests(guests - 1);
-  };
-
+interface GuestsNumberPickerProps {
+  guests: number;
+  handleDecrement: React.MouseEventHandler<HTMLDivElement>;
+  handleIncrement: React.MouseEventHandler<HTMLDivElement>;
+}
+const GuestsNumberPicker: React.FC<GuestsNumberPickerProps> = ({
+  guests,
+  handleDecrement,
+  handleIncrement,
+}) => {
   return (
-    <Flex direction="column" gap="1rem">
+    <Flex
+      direction="column"
+      justifyContent="center"
+      borderBottomWidth="2px"
+      height="100%"
+    >
       <Flex
         paddingInline="1rem"
         alignItems="center"
@@ -66,7 +67,7 @@ const GuestsNumberPicker = () => {
           onClick={handleIncrement}
         />
       </Flex>
-      <Box borderBottomWidth="2px"></Box>
+      {/* <Box borderBottomWidth="2px" height="32px"></Box> */}
     </Flex>
   );
 };

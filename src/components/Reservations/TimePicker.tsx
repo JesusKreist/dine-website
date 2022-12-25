@@ -41,19 +41,32 @@ const TimePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   }, [hourIsInvalid, minuteIsInvalid]);
 
   return (
-    <Flex alignItems="center" justifyContent="space-between">
-      <Box>
+    <Flex
+      alignItems="center"
+      justifyContent="space-between"
+      gap={{ base: "0.5rem", md: "unset" }}
+      direction={{ base: "column", md: "row" }}
+      width={{ base: "100%", md: "unset" }}
+    >
+      <Box alignSelf={{ base: "start", md: "unset" }}>
         <FormControl isInvalid={isTimeIncomplete}>
           <Text
             fontSize="lg"
-            paddingTop={isTimeIncomplete ? "1rem" : "unset"}
+            marginTop={
+              isTimeIncomplete
+                ? { base: "0.5rem", md: "1rem" }
+                : { base: "0.5rem", md: "unset" }
+            }
             lineHeight="initial"
             color={isTimeIncomplete ? "red" : "unset"}
           >
             Pick a time
           </Text>
           {isTimeIncomplete && (
-            <FormErrorMessage fontSize="small">
+            <FormErrorMessage
+              fontSize="small"
+              display={{ base: "none", md: "block" }}
+            >
               {errorMessages[0]}
             </FormErrorMessage>
           )}

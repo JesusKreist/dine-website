@@ -1,5 +1,5 @@
 import { Flex, Grid, Button, Box, Image, useToast } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import DatePicker from "./DatePicker";
 import EmailInput from "./EmailInput";
 import GuestsNumberPicker from "./GuestsNumberPicker";
@@ -11,6 +11,19 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "./validationSchema";
 
 const ReservationsForm = () => {
+  const [guests, setGuests] = useState(1);
+
+  const handleIncrement = (event: React.FormEvent) => {
+    event.preventDefault();
+    setGuests(guests + 1);
+  };
+
+  const handleDecrement = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (guests === 1) return;
+    setGuests(guests - 1);
+  };
+
   const {
     register,
     handleSubmit,
@@ -40,6 +53,8 @@ const ReservationsForm = () => {
         yearOfReservation: "",
       });
 
+      setGuests(1);
+
       toast({
         title: "Reservation created.",
         description: "We've made your reservation.",
@@ -54,8 +69,9 @@ const ReservationsForm = () => {
   return (
     <Flex
       className="reservations-form"
-      width="540px"
-      height="545px"
+      margin="0 auto"
+      width={{ base: "327px", sm: "90%", md: "540px" }}
+      height={{ base: "585px", md: "545px" }}
       bgColor="white"
       alignItems="center"
       justifyContent="center"
@@ -65,7 +81,8 @@ const ReservationsForm = () => {
       <Grid
         gridTemplateRows="repeat(6, 80px)"
         as="form"
-        width="80%"
+        justifyContent="stretch"
+        width={{ base: "90%", md: "80%" }}
         fontSize="lg"
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -85,8 +102,17 @@ const ReservationsForm = () => {
           register={register}
           errors={errors as Partial<ErrorObject>}
         />
-        <GuestsNumberPicker />
-        <Button type="submit" variant="brandPrimaryOnLight">
+        <GuestsNumberPicker
+          guests={guests}
+          handleDecrement={handleDecrement}
+          handleIncrement={handleIncrement}
+        />
+        <Button
+          type="submit"
+          variant="brandPrimaryOnLight"
+          height="64px"
+          alignSelf="end"
+        >
           MAKE RESERVATION
         </Button>
       </Grid>
@@ -95,7 +121,7 @@ const ReservationsForm = () => {
         top="500px"
         left="-80px"
         zIndex="-1"
-        display={{ md: "none", lg: "block" }}
+        display={{ base: "none", lg: "block" }}
       >
         <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
       </Box>

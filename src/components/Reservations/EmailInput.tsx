@@ -1,4 +1,10 @@
-import { FormControl, FormErrorMessage, Input, Flex } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormErrorMessage,
+  Input,
+  Flex,
+  Box,
+} from "@chakra-ui/react";
 import { ReservationsInputProps } from "./types";
 
 const EmailInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
@@ -6,7 +12,7 @@ const EmailInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const emailErrorMessage = errors.email?.message;
 
   return (
-    <Flex alignItems="center">
+    <Flex justifyContent={emailIsInvalid ? "center" : "end"} direction="column">
       <FormControl isInvalid={emailIsInvalid}>
         <Input
           type="email"
@@ -25,6 +31,7 @@ const EmailInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
           </FormErrorMessage>
         )}
       </FormControl>
+      {!emailIsInvalid && <Box height="0.5rem"></Box>}
     </Flex>
   );
 };

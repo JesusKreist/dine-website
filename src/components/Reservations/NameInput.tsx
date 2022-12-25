@@ -1,11 +1,17 @@
-import { FormControl, FormErrorMessage, Input, Flex } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormErrorMessage,
+  Input,
+  Flex,
+  Box,
+} from "@chakra-ui/react";
 import { ReservationsInputProps } from "./types";
 
 const NameInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const nameIsInvalid = !!errors.name;
   const nameErrorMessage = errors.name?.message;
   return (
-    <Flex alignItems="center">
+    <Flex justifyContent={nameIsInvalid ? "center" : "end"} direction="column">
       <FormControl isInvalid={nameIsInvalid}>
         <Input
           type="text"
