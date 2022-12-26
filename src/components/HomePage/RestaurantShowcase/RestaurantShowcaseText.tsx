@@ -18,9 +18,9 @@ const RestaurantShowcaseText: React.FC<RestaurantShowcaseTextProps> = ({
       margin={{ base: "0 auto", lg: "unset" }}
       placeContent="center"
       flexDirection="column"
-      maxWidth={{ base: "327px", md: "445px" }}
-      rowGap={{ base: "2rem", md: "1rem", lg: "2rem" }}
-      paddingLeft={{ lg: withLeftPadding ? "2rem" : "0" }}
+      maxWidth={{ base: "327px", md: "445px", lg: "350px", xl: "445px" }}
+      rowGap={{ base: "2rem", md: "1rem", xl: "2rem" }}
+      paddingLeft={{ xl: withLeftPadding ? "2rem" : "0" }}
       textAlign={{ base: "center", lg: "left" }}
       align={{ base: "center", lg: "unset" }}
     >

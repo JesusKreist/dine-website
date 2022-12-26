@@ -21,16 +21,16 @@ const Events = () => {
       <Box
         width="160px"
         position="relative"
-        marginLeft={{ md: "3rem", lg: "8rem" }}
-        bottom={{ md: "14.5rem", lg: "11.5rem" }}
+        marginLeft={{ md: "3rem", xl: "8rem" }}
+        bottom={{ md: "14.5rem", xl: "11.5rem" }}
         display={{ base: "none", md: "block" }}
       >
         <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
       </Box>
 
       <Box
-        display={{ base: "none", lg: "block" }}
-        width={{ md: "48px", lg: "95px" }}
+        display={{ base: "none", xl: "block" }}
+        width={{ md: "48px", xl: "95px" }}
         height="2px"
         bgColor="#9e7f66"
         position="relative"
@@ -39,12 +39,12 @@ const Events = () => {
       ></Box>
 
       <Flex
-        gap={{ base: "2rem", md: "3.5rem", lg: "7rem" }}
-        paddingLeft={{ lg: "10rem" }}
-        marginTop={{ base: "5rem", md: "-275px", lg: "-220px" }}
-        paddingBottom={{ base: "5rem", lg: "10rem" }}
+        gap={{ base: "2rem", md: "3.5rem", xl: "7rem" }}
+        paddingLeft={{ xl: "10rem" }}
+        marginTop={{ base: "5rem", md: "-275px", xl: "-220px" }}
+        paddingBottom={{ base: "5rem", xl: "10rem" }}
         alignItems="center"
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", xl: "row" }}
       >
         <Box as="picture">
           <Box
@@ -59,12 +59,12 @@ const Events = () => {
           ></Box>
           <Image
             boxShadow="2xl"
-            width={{ base: "85%", md: "573px", lg: "540px" }}
-            height={{ md: "360px", lg: "600px" }}
+            width={{ base: "85%", md: "573px", xl: "540px" }}
+            height={{ md: "360px", xl: "600px" }}
             src={event.imageUrl}
             alt={`${event.title} event image`}
             objectFit="contain"
-            margin={{ base: "0 auto", lg: "unset" }}
+            margin={{ base: "0 auto", xl: "unset" }}
           />
         </Box>
 

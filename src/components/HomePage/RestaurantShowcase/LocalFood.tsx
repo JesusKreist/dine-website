@@ -15,8 +15,8 @@ const LocalFood = () => {
 
       <Box
         position="relative"
-        height={{ md: "360px", lg: "720px" }}
-        width={{ base: "85%", md: "573px", lg: "unset" }}
+        height={{ md: "360px", lg: "540px", xl: "720px" }}
+        width={{ base: "85%", md: "573px", lg: "unset", xl: "unset" }}
         margin={{ base: "0 auto", lg: "unset" }}
       >
         <Box as="picture">
@@ -27,7 +27,7 @@ const LocalFood = () => {
           ></Box>
           <Box
             as="source"
-            media="(min-width: 400px) and (max-width: 1200px)"
+            media="(min-width: 400px) and (max-width: 960px)"
             srcSet="/homepage/locally-sourced-tablet@2x.jpg"
           ></Box>
           <Image
@@ -36,28 +36,28 @@ const LocalFood = () => {
             alt="image showing locally sourced food"
             objectFit="contain"
             height="100%"
-            marginLeft={{ lg: "-4rem" }}
+            marginLeft={{ lg: "-3.5rem", xl: "-4rem" }}
           />
         </Box>
 
         <Box
           position="relative"
-          bottom={{ md: "-290px", lg: "unset" }}
+          bottom={{ md: "-290px", xl: "unset" }}
           className="second_pic_box"
-          left={{ md: "530px", lg: "unset" }}
+          left={{ md: "530px", xl: "unset" }}
           zIndex="-1"
-          width={{ lg: "895px" }}
-          marginLeft={{ md: "-14rem", lg: "-16rem" }}
-          height={{ md: "320px", lg: "unset" }}
+          width={{ xl: "895px" }}
+          marginLeft={{ md: "-14rem", lg: "-43rem", xl: "-16rem" }}
+          height={{ md: "320px", xl: "unset" }}
           display={{ base: "none", md: "block" }}
         >
           <Image
             src="patterns/pattern-curve-top-left.svg"
             alt="curve pattern"
-            objectFit={{ md: "cover", lg: "contain" }}
-            objectPosition={{ md: "left", lg: "unset" }}
+            objectFit={{ md: "cover", xl: "contain" }}
+            objectPosition={{ md: "left", xl: "unset" }}
             position="relative"
-            bottom={{ md: "130px", lg: "400px" }}
+            bottom={{ md: "130px", lg: "500px", xl: "400px" }}
             height="100%"
             zIndex={-1}
           />
@@ -65,13 +65,14 @@ const LocalFood = () => {
         <Box
           width="160px"
           position="relative"
-          bottom={{ md: "450px", lg: "760px" }}
-          marginLeft={{ md: "29rem", lg: "27rem" }}
+          bottom={{ md: "450px", lg: "500px", xl: "760px" }}
+          marginLeft={{ md: "29rem", lg: "15rem", xl: "27rem" }}
           display={{ base: "none", md: "block" }}
         >
           <Image src="patterns/pattern-lines.svg" alt="lines pattern" />
         </Box>
       </Box>
+
       <Box
         display={{ base: "flex", lg: "none" }}
         zIndex="2"

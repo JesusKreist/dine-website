@@ -5,21 +5,21 @@ import LinkButton from "../../Navigation/LinkButton";
 const ReservationBanner = () => {
   return (
     <Box
-      height={{ base: "328px", md: "272px", lg: "240px" }}
+      height={{ base: "328px", md: "272px", xl: "240px" }}
       bgImage={{
         base: "/homepage/ready-bg-mobile@2x.jpg",
         md: "/homepage/ready-bg-tablet@2x.jpg",
-        lg: "/homepage/ready-bg-desktop@2x.jpg",
+        xl: "/homepage/ready-bg-desktop@2x.jpg",
       }}
       bgSize="cover"
-      paddingLeft={{ lg: "10rem" }}
+      paddingLeft={{ xl: "10rem" }}
     >
       <Flex
         alignItems="center"
         height="100%"
-        gap={{ base: "2rem", lg: "16rem" }}
-        direction={{ base: "column", lg: "row" }}
-        justifyContent={{ base: "center", lg: "flex-start" }}
+        gap={{ base: "2rem", xl: "16rem" }}
+        direction={{ base: "column", xl: "row" }}
+        justifyContent={{ base: "center", xl: "flex-start" }}
       >
         <Heading
           fontWeight="bold"
@@ -27,7 +27,7 @@ const ReservationBanner = () => {
           lineHeight="48px"
           color="white"
           width={{ base: "85%", md: "unset" }}
-          textAlign={{ base: "center", lg: "left" }}
+          textAlign={{ base: "center", xl: "left" }}
         >
           Ready to make a reservation?
         </Heading>

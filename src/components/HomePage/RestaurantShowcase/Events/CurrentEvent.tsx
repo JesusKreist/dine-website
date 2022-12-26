@@ -18,14 +18,14 @@ const CurrentEvent: React.FC<CurrentEventProps> = ({
 }) => {
   return (
     <Stack
-      direction={{ base: "column-reverse", lg: "column" }}
-      alignItems={{ base: "center", lg: "start" }}
+      direction={{ base: "column-reverse", xl: "column" }}
+      alignItems={{ base: "center", xl: "start" }}
       spacing="3rem"
     >
       <VStack
-        alignItems={{ base: "center", lg: "start" }}
+        alignItems={{ base: "center", xl: "start" }}
         spacing={{ base: "2rem", md: "2rem" }}
-        paddingBottom={{ md: "2.5rem", lg: "1.5rem" }}
+        paddingBottom={{ md: "2.5rem", xl: "1.5rem" }}
         width="100%"
       >
         <Box height="187px">

@@ -14,6 +14,7 @@ const MenuHighlightsShowcase: React.FC<MenuHighlightsShowcaseProps> = ({
 }) => {
   return (
     <Flex
+      alignItems="center"
       gap="2rem"
       zIndex="2"
       direction={{ base: "column", md: "row" }}

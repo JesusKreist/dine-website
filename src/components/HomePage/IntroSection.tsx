@@ -22,7 +22,7 @@ const IntroSection = () => {
         textAlign={{ base: "center", lg: "left" }}
         margin={{ base: "0 auto", lg: "unset" }}
         paddingTop={{ base: "16rem", md: "25rem", lg: "4rem" }}
-        paddingLeft={{ lg: "5rem", "2xl": "10rem" }}
+        paddingLeft={{ lg: "3rem", "2xl": "10rem" }}
         paddingBottom="6rem"
         color="white"
         direction="column"

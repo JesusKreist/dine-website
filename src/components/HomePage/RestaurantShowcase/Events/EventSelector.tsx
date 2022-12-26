@@ -58,8 +58,8 @@ const EventSelector: React.FC<EventSelectorProps> = ({
   return (
     <Stack
       alignItems={{ base: "center", md: "start" }}
-      direction={{ base: "column", md: "row", lg: "column" }}
-      spacing={{ base: "1rem", md: "5rem", lg: "1rem" }}
+      direction={{ base: "column", md: "row", xl: "column" }}
+      spacing={{ base: "1rem", md: "5rem", xl: "1rem" }}
     >
       <EventSelectorButton
         onClick={() => {

@@ -1,12 +1,4 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  HStack,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Divider, Flex, VStack } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import MenuHighlightsShowcase from "./MenuHighlightsShowcase";
 import RestaurantShowcaseText from "./RestaurantShowcaseText";
@@ -22,17 +14,17 @@ const MenuHighlights = () => {
     <Box
       bgColor="black"
       color="white"
-      paddingLeft={{ lg: "10rem" }}
-      paddingRight={{ lg: "10rem" }}
-      paddingTop={{ base: "5rem", md: "unset", lg: "14rem" }}
-      paddingBottom={{ base: "5rem", md: "unset", lg: "6rem" }}
-      height={{ md: "891px", lg: "unset" }}
+      paddingLeft={{ xl: "10rem" }}
+      paddingRight={{ xl: "10rem" }}
+      paddingTop={{ base: "5rem", md: "unset", xl: "14rem" }}
+      paddingBottom={{ base: "5rem", md: "unset", xl: "6rem" }}
+      height={{ md: "891px", xl: "unset" }}
     >
       <Flex
-        height={{ md: "100%", lg: "unset" }}
-        justifyContent={{ base: "space-evenly", lg: "space-between" }}
-        alignItems={{ md: "center", lg: "unset" }}
-        direction={{ base: "column", lg: "row" }}
+        height={{ md: "100%", xl: "unset" }}
+        justifyContent={{ base: "space-evenly", xl: "space-between" }}
+        alignItems={{ md: "center", xl: "unset" }}
+        direction={{ base: "column", xl: "row" }}
         gap={{ base: "8rem", md: "unset" }}
       >
         <RestaurantShowcaseText
