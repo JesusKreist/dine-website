@@ -13,9 +13,11 @@ const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
       overflow="hidden"
       border={{
         base: "2px solid green",
+        sm: "2px solid white",
         md: "2px solid orange",
         lg: "2px solid blue",
         xl: "2px solid red",
+        "2xl": "2px solid purple",
       }}
     >
       {children}

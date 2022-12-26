@@ -6,7 +6,7 @@ const breakpoints = {
   md: "768px",
   lg: "960px",
   xl: "1200px",
-  "2xlw": "1440px",
+  "2xl": "1440px",
 };
 
 const brandPrimaryOnLight = defineStyle({
