@@ -1,10 +1,13 @@
 import { Box, Image } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 const Logo = () => {
   return (
     <Box width="103px">
-      <Image src="/logo.svg" alt="logo"></Image>
+      <Link href="/">
+        <Image src="/logo.svg" alt="logo"></Image>
+      </Link>
     </Box>
   );
 };
