@@ -1,10 +1,25 @@
 import { Heading, Text, Box, Button } from "@chakra-ui/react";
+import { useState } from "react";
+import { ReservationsFormProps } from "./ReservationsForm";
 
-const ReservationsHeroText = () => {
+interface ReservationsHeroTextProps {
+  setFormFocus: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const ReservationsHeroText: React.FC<ReservationsHeroTextProps> = ({
+  setFormFocus,
+}) => {
+  const animate = () => {
+    // Button begins to shake
+    setFormFocus(true);
+
+    // Buttons stops to shake after 2 seconds
+    setTimeout(() => setFormFocus(false), 2000);
+  };
+
   return (
     <Box
       width={{ base: "85vw", md: "573px", "2xl": "445px" }}
-      // border="2px solid pink"
       color="white"
       textAlign={{ base: "center", "2xl": "left" }}
       margin={{ base: "0 auto", "2xl": "unset" }}
@@ -35,6 +50,7 @@ const ReservationsHeroText = () => {
         variant="brandPrimaryOnDark"
         marginBottom={{ base: "6rem", md: "unset" }}
         display={{ base: "inline-flex", "2xl": "none" }}
+        onClick={animate}
       >
         RESERVE PLACE
       </Button>

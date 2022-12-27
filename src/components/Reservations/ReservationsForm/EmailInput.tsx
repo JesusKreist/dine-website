@@ -5,7 +5,7 @@ import {
   Flex,
   Box,
 } from "@chakra-ui/react";
-import { ReservationsInputProps } from "./types";
+import { ReservationsInputProps } from "../types";
 
 const EmailInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const emailIsInvalid = !!errors.email;

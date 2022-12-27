@@ -1,11 +1,14 @@
-import { Flex, Grid, GridItem, Image, Box, Text } from "@chakra-ui/react";
-import React from "react";
+import { Grid, GridItem, Image, Box } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { AttentionSeeker } from "react-awesome-reveal";
 import Footer from "../HomePage/Footer/Footer";
 import Logo from "../logo/Logo";
-import ReservationsForm from "./ReservationsForm";
-import ReservationsHeroText from "./ReservationsHeroText";
+import ReservationsForm from "./ReservationsForm/ReservationsForm";
+import ReservationsHeroText from "./ReservationsForm/ReservationsHeroText";
 
 const Reservations = () => {
+  const [formIsInFocus, setFormIsInFocus] = useState(false);
+
   return (
     <Grid>
       <Grid
@@ -44,9 +47,9 @@ const Reservations = () => {
           alignItems={{ md: "center", "2xl": "unset" }}
           justifyContent="space-around"
         >
-          <ReservationsHeroText />
+          <ReservationsHeroText setFormFocus={setFormIsInFocus} />
 
-          <ReservationsForm />
+          <ReservationsForm formIsInFocus={formIsInFocus} />
         </Grid>
       </Grid>
       <GridItem display={{ base: "none", xl: "unset" }}>

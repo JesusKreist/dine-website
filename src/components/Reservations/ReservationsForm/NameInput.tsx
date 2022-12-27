@@ -5,7 +5,7 @@ import {
   Flex,
   Box,
 } from "@chakra-ui/react";
-import { ReservationsInputProps } from "./types";
+import { ReservationsInputProps } from "../types";
 
 const NameInput: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const nameIsInvalid = !!errors.name;

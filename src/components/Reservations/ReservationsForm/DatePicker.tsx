@@ -8,7 +8,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { ReservationsInputProps } from "./types";
+import { ReservationsInputProps } from "../types";
 
 const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const [isDateIncomplete, setIsDateIncomplete] = useState(false);

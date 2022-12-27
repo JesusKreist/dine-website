@@ -10,8 +10,8 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import AmOrPmSelectBox from "./ReservationsForm/AmOrPmSelectBox";
-import { ReservationsInputProps } from "./types";
+import AmOrPmSelectBox from "./AmOrPmSelectBox";
+import { ReservationsInputProps } from "../types";
 
 const TimePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
   const [isTimeIncomplete, setIsTimeIncomplete] = useState(false);

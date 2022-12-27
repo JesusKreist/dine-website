@@ -6,11 +6,18 @@ import GuestsNumberPicker from "./GuestsNumberPicker";
 import NameInput from "./NameInput";
 import TimePicker from "./TimePicker";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { ErrorObject, ReservationsFormInputs } from "./types";
+import { ErrorObject, ReservationsFormInputs } from "../types";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { validationSchema } from "./validationSchema";
+import { validationSchema } from "../validationSchema";
+import styles from "./ReservationsForm.module.css";
 
-const ReservationsForm = () => {
+export interface ReservationsFormProps {
+  formIsInFocus: boolean;
+}
+
+const ReservationsForm: React.FC<ReservationsFormProps> = ({
+  formIsInFocus,
+}) => {
   const [guests, setGuests] = useState(1);
 
   const handleIncrement = (event: React.FormEvent) => {
@@ -66,17 +73,18 @@ const ReservationsForm = () => {
     }
   }, [isSubmitSuccessful, reset, toast]);
 
-  // return <Box height="500px" width="400px" border="2px solid green"></Box>;
-
   return (
     <Flex
+      className={
+        formIsInFocus
+          ? `${styles.shake} reservations-form`
+          : "reservations-form"
+      }
       alignSelf="center"
-      className="reservations-form"
       width={{
         sm: "90%",
         md: "60vw",
         lg: "540px",
-        // xl: "900px",
         "2xl": "540px",
       }}
       margin={{ base: "0 auto", "2xl": "unset" }}
