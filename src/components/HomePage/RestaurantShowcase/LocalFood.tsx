@@ -1,4 +1,4 @@
-import { Box, Image, Flex } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import RestaurantShowcaseText from "./RestaurantShowcaseText";
 

@@ -32,7 +32,7 @@ const EnjoyablePlace = () => {
           />
         </Box>
 
-        {/* <Box
+        <Box
           display={{ base: "none", md: "block" }}
           width={{ md: "500px", lg: "800px", xl: "895px" }}
           marginLeft={{ md: "-14rem", lg: "-5rem", xl: "-10rem" }}
@@ -47,7 +47,7 @@ const EnjoyablePlace = () => {
             height="100%"
             zIndex={-1}
           />
-        </Box> */}
+        </Box>
       </Box>
 
       <Box display="flex" paddingBottom={{ base: "5rem", lg: "unset" }}>

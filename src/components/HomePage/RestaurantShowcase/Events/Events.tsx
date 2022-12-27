@@ -21,7 +21,7 @@ const Events = () => {
       <Box
         width="160px"
         position="relative"
-        marginLeft={{ md: "3rem", xl: "8rem" }}
+        marginLeft={{ md: "3rem", lg: "8rem", xl: "0rem", "2xl": "8rem" }}
         bottom={{ md: "14.5rem", xl: "11.5rem" }}
         display={{ base: "none", md: "block" }}
       >
@@ -34,13 +34,13 @@ const Events = () => {
         height="2px"
         bgColor="#9e7f66"
         position="relative"
-        marginLeft="43rem"
+        marginLeft={{ xl: "34.5rem", "2xl": "43rem" }}
         top={event.lineCssTopPosition}
       ></Box>
 
       <Flex
         gap={{ base: "2rem", md: "3.5rem", xl: "7rem" }}
-        paddingLeft={{ xl: "10rem" }}
+        paddingLeft={{ xl: "3rem", "2xl": "10rem" }}
         marginTop={{ base: "5rem", md: "-275px", xl: "-220px" }}
         paddingBottom={{ base: "5rem", xl: "10rem" }}
         alignItems="center"
@@ -54,7 +54,7 @@ const Events = () => {
           ></Box>
           <Box
             as="source"
-            media="(min-width: 400px) and (max-width: 1200px)"
+            media="(min-width: 400px) and (max-width: 960px)"
             srcSet={event.imageUrlTablet}
           ></Box>
           <Image
@@ -63,8 +63,9 @@ const Events = () => {
             height={{ md: "360px", xl: "600px" }}
             src={event.imageUrl}
             alt={`${event.title} event image`}
-            objectFit="contain"
-            margin={{ base: "0 auto", xl: "unset" }}
+            objectFit="cover"
+            maxHeight="100%"
+            margin={{ base: "0 auto", lg: "unset" }}
           />
         </Box>
 

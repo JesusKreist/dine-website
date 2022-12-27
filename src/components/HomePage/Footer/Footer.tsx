@@ -5,10 +5,10 @@ import Logo from "../../logo/Logo";
 const Footer = () => {
   return (
     <Box
-      display={{ base: "flex", xl: "block" }}
+      display={{ base: "flex", "2xl": "block" }}
       paddingBlock="5rem"
       bgColor="black"
-      paddingLeft={{ xl: "10rem" }}
+      paddingLeft={{ "2xl": "10rem" }}
       color="white"
       alignItems="center"
       justifyContent="center"
@@ -16,7 +16,7 @@ const Footer = () => {
       <Flex
         direction={{ base: "column", md: "row" }}
         alignItems="center"
-        gap={{ base: "5rem", md: "9rem", xl: "12rem" }}
+        gap={{ base: "5rem", md: "9rem", xl: "8rem", "2xl": "12rem" }}
         fontSize={{ md: "14px", xl: "17px" }}
         lineHeight={{ md: "28px", xl: "28px" }}
         letterSpacing="2px"
@@ -26,7 +26,7 @@ const Footer = () => {
         </Box>
 
         <Flex
-          gap={{ base: "5rem", md: "unset", xl: "12rem" }}
+          gap={{ base: "5rem", md: "unset", xl: "8rem", "2xl": "12rem" }}
           width={{ md: "456px", xl: "unset" }}
           height={{ md: "200px", xl: "unset" }}
           direction={{ base: "column", xl: "row" }}

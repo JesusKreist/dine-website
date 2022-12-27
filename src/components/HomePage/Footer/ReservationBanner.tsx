@@ -12,14 +12,14 @@ const ReservationBanner = () => {
         xl: "/homepage/ready-bg-desktop@2x.jpg",
       }}
       bgSize="cover"
-      paddingLeft={{ xl: "10rem" }}
+      paddingLeft={{ "2xl": "10rem" }}
     >
       <Flex
         alignItems="center"
         height="100%"
-        gap={{ base: "2rem", xl: "16rem" }}
+        gap={{ base: "2rem", xl: "10rem", "2xl": "16rem" }}
         direction={{ base: "column", xl: "row" }}
-        justifyContent={{ base: "center", xl: "flex-start" }}
+        justifyContent={{ base: "center", "2xl": "flex-start" }}
       >
         <Heading
           fontWeight="bold"
