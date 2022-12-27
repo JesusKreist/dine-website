@@ -20,7 +20,7 @@ const AmOrPmSelectBox = () => {
 
   return (
     <FormControl
-      width={{ base: "88px", md: "97px" }}
+      width={{ base: "85px", lg: "97px" }}
       position="relative"
       borderBottomWidth="2px"
     >

@@ -75,7 +75,10 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
       </Box>
 
       <Flex columnGap="15px">
-        <FormControl width="80px" isInvalid={monthIsInvalid}>
+        <FormControl
+          width={{ base: "75px", "2xl": "80px" }}
+          isInvalid={monthIsInvalid}
+        >
           <Input
             type="text"
             autoComplete="month"
@@ -90,7 +93,10 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
           />
         </FormControl>
 
-        <FormControl width="80px" isInvalid={dayIsInvalid}>
+        <FormControl
+          width={{ base: "75px", "2xl": "80px" }}
+          isInvalid={dayIsInvalid}
+        >
           <Input
             type="text"
             autoComplete="day"
@@ -105,7 +111,10 @@ const DatePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
           />
         </FormControl>
 
-        <FormControl width="97px" isInvalid={yearIsInvalid}>
+        <FormControl
+          width={{ base: "85px", lg: "97px" }}
+          isInvalid={yearIsInvalid}
+        >
           <Input
             type="text"
             placeholder="YYYY"

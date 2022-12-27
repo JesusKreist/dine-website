@@ -66,11 +66,20 @@ const ReservationsForm = () => {
     }
   }, [isSubmitSuccessful, reset, toast]);
 
+  // return <Box height="500px" width="400px" border="2px solid green"></Box>;
+
   return (
     <Flex
+      alignSelf="center"
       className="reservations-form"
-      margin="0 auto"
-      width={{ base: "327px", sm: "90%", md: "540px" }}
+      width={{
+        sm: "90%",
+        md: "60vw",
+        lg: "540px",
+        // xl: "900px",
+        "2xl": "540px",
+      }}
+      margin={{ base: "0 auto", "2xl": "unset" }}
       height={{ base: "585px", md: "545px" }}
       bgColor="white"
       alignItems="center"
@@ -81,8 +90,7 @@ const ReservationsForm = () => {
       <Grid
         gridTemplateRows="repeat(6, 80px)"
         as="form"
-        justifyContent="stretch"
-        width={{ base: "90%", md: "80%" }}
+        width={{ base: "90%" }}
         fontSize="lg"
         onSubmit={handleSubmit(onSubmit)}
       >

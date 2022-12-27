@@ -3,10 +3,11 @@ import { Heading, Text, Box, Button } from "@chakra-ui/react";
 const ReservationsHeroText = () => {
   return (
     <Box
-      width={{ base: "85vw", md: "573px", lg: "445px" }}
+      width={{ base: "85vw", md: "573px", "2xl": "445px" }}
+      // border="2px solid pink"
       color="white"
-      textAlign={{ base: "center", lg: "left" }}
-      margin="0 auto"
+      textAlign={{ base: "center", "2xl": "left" }}
+      margin={{ base: "0 auto", "2xl": "unset" }}
     >
       <Heading
         as="h2"
@@ -33,6 +34,7 @@ const ReservationsHeroText = () => {
         height="64px"
         variant="brandPrimaryOnDark"
         marginBottom={{ base: "6rem", md: "unset" }}
+        display={{ base: "inline-flex", "2xl": "none" }}
       >
         RESERVE PLACE
       </Button>

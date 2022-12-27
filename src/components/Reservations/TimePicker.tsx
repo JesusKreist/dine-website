@@ -74,7 +74,10 @@ const TimePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
       </Box>
 
       <Flex columnGap="15px">
-        <FormControl width="80px" isInvalid={hourIsInvalid}>
+        <FormControl
+          width={{ base: "75px", "2xl": "80px" }}
+          isInvalid={hourIsInvalid}
+        >
           <Input
             type="text"
             placeholder="09"
@@ -88,7 +91,10 @@ const TimePicker: React.FC<ReservationsInputProps> = ({ register, errors }) => {
           />
         </FormControl>
 
-        <FormControl width="80px" isInvalid={minuteIsInvalid}>
+        <FormControl
+          width={{ base: "75px", "2xl": "80px" }}
+          isInvalid={minuteIsInvalid}
+        >
           <Input
             type="text"
             placeholder="00"
